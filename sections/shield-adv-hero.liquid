@@ -1,0 +1,70 @@
+{%- comment -%} SHIELD advertorial — Encabezado (minimalista blanco + oro + negro) {%- endcomment -%}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;900&family=Italiana&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+  .shield-adv{--ink:#0B0B0C;--body:#33333a;--muted:#7a7a82;--line:#ece8dd;--g1:#E7CD8C;--g2:#967434;--gd:#7d5e28;--gold:linear-gradient(135deg,#E7CD8C,#967434);--fd:"Big Shoulders Display",Impact,sans-serif;--fs:"Italiana",Georgia,serif;--fm:"Space Mono",monospace;--fb:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:#fff;color:var(--body);font-family:var(--fb)}
+  .shield-adv img{max-width:100%;height:auto;display:block}
+  .adv-wrap{max-width:740px;margin:0 auto;padding:0 22px}
+  .adv-hero{padding:30px 0 8px}
+  .adv-topbar{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:30px}
+  .adv-logo{font-family:var(--fs);letter-spacing:.2em;font-size:20px;text-transform:uppercase;color:var(--ink)}
+  .adv-tag{font-family:var(--fm);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+  .adv-eyebrow{font-family:var(--fm);font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gd);margin:0 0 14px}
+  .adv-h1{font-family:var(--fd);font-weight:900;line-height:1.02;text-transform:uppercase;color:var(--ink);font-size:clamp(32px,6.4vw,54px);margin:0 0 18px}
+  .adv-h1 .g{background:var(--gold);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .adv-byline{display:flex;align-items:center;gap:12px;margin:0 0 26px}
+  .adv-ava{width:40px;height:40px;border-radius:50%;background:var(--gold);color:#1a1408;font-family:var(--fd);font-weight:900;font-size:18px;display:flex;align-items:center;justify-content:center}
+  .adv-by-name{font-size:14px;color:var(--ink);font-weight:600;margin:0;line-height:1.3}
+  .adv-by-meta{font-family:var(--fm);font-size:11px;letter-spacing:.06em;color:var(--muted);margin:0}
+  .adv-lead{font-size:clamp(16px,2.3vw,19px);line-height:1.7;color:var(--body);margin:0 0 24px}
+  .adv-lead strong{color:var(--ink)}
+  .adv-hero__img{border-radius:10px;border:1px solid var(--line);margin:6px 0 0}
+</style>
+
+<div class="shield-adv">
+  <article class="adv-hero">
+    <div class="adv-wrap">
+      <div class="adv-topbar">
+        <span class="adv-logo">{{ section.settings.logo_text }}</span>
+        <span class="adv-tag">{{ section.settings.tag_text }}</span>
+      </div>
+      {%- if section.settings.eyebrow != blank -%}<p class="adv-eyebrow">{{ section.settings.eyebrow }}</p>{%- endif -%}
+      <h1 class="adv-h1">{{ section.settings.title }}</h1>
+      <div class="adv-byline">
+        <div class="adv-ava">{{ section.settings.author | slice: 0 | upcase }}</div>
+        <div>
+          <p class="adv-by-name">{{ section.settings.author }}</p>
+          <p class="adv-by-meta">{{ section.settings.meta }}</p>
+        </div>
+      </div>
+      {%- if section.settings.lead != blank -%}<div class="adv-lead">{{ section.settings.lead }}</div>{%- endif -%}
+      {%- assign prod = all_products[section.settings.product_handle] -%}
+      {%- if section.settings.image != blank -%}
+        <img class="adv-hero__img" src="{{ section.settings.image | image_url: width: 1000 }}" alt="{{ section.settings.title | escape }}" loading="eager">
+      {%- elsif prod != blank and prod.featured_image != blank -%}
+        <img class="adv-hero__img" src="{{ prod.featured_image | image_url: width: 1000 }}" alt="{{ prod.title | escape }}" loading="eager">
+      {%- endif -%}
+    </div>
+  </article>
+</div>
+
+{% schema %}
+{
+  "name": "SHIELD adv · Hero",
+  "tag": "section",
+  "settings": [
+    { "type": "text", "id": "logo_text", "label": "Logo (texto)", "default": "SHIELD" },
+    { "type": "text", "id": "tag_text", "label": "Etiqueta superior derecha", "default": "Nota patrocinada" },
+    { "type": "text", "id": "eyebrow", "label": "Bajada", "default": "Cuidado de la piel masculina" },
+    { "type": "textarea", "id": "title", "label": "Titular", "default": "7 razones por las que cada vez más hombres cambian su jabón por SHIELD" },
+    { "type": "text", "id": "author", "label": "Autor", "default": "Redacción SHIELD" },
+    { "type": "text", "id": "meta", "label": "Metadato (fecha · lectura)", "default": "Actualizado hoy · 4 min de lectura" },
+    { "type": "richtext", "id": "lead", "label": "Párrafo de entrada", "default": "<p>El acné en la espalda, el pecho y los hombros es más común de lo que se habla. Y la mayoría de los jabones no llegan al fondo del poro: resecan, irritan y no limpian de verdad. Reunimos las razones por las que tantos hombres están sumando <strong>SHIELD</strong> a su ducha diaria.</p>" },
+    { "type": "image_picker", "id": "image", "label": "Imagen principal (si vacía, usa la del producto)" },
+    { "type": "text", "id": "product_handle", "label": "Handle del producto (para imagen por defecto)", "default": "shield-gel-antiacne-corporal" }
+  ],
+  "presets": [{ "name": "SHIELD adv · Hero" }]
+}
+{% endschema %}

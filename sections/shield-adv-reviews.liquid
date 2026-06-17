@@ -1,0 +1,77 @@
+{%- comment -%} SHIELD advertorial — Reseñas {%- endcomment -%}
+<style>
+  .shield-adv{--ink:#0B0B0C;--body:#33333a;--muted:#7a7a82;--line:#ece8dd;--g2:#967434;--gd:#7d5e28;--gold:linear-gradient(135deg,#E7CD8C,#967434);--fd:"Big Shoulders Display",Impact,sans-serif;--fm:"Space Mono",monospace;--fb:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:#fff;color:var(--body);font-family:var(--fb)}
+  .adv-wrap{max-width:740px;margin:0 auto;padding:0 22px}
+  .adv-rev{padding:34px 0;border-top:1px solid var(--line)}
+  .adv-rev__head{display:flex;align-items:center;gap:16px;margin:0 0 22px;flex-wrap:wrap}
+  .adv-rev__score{font-family:var(--fd);font-weight:900;font-size:48px;line-height:1;color:var(--ink)}
+  .adv-rev__stars{color:var(--g2);letter-spacing:3px;font-size:18px;margin:0 0 2px}
+  .adv-rev__count{font-family:var(--fm);font-size:11px;letter-spacing:.06em;color:var(--muted);margin:0}
+  .adv-rev__grid{display:grid;grid-template-columns:1fr;gap:12px}
+  .adv-rev__card{border:1px solid var(--line);border-radius:10px;padding:18px}
+  .adv-rev__top{display:flex;align-items:center;gap:10px;margin:0 0 10px}
+  .adv-rev__ava{width:32px;height:32px;border-radius:50%;background:var(--gold);color:#1a1408;font-family:var(--fd);font-weight:900;font-size:14px;display:flex;align-items:center;justify-content:center}
+  .adv-rev__name{font-size:13px;font-weight:600;color:var(--ink);margin:0;line-height:1.2}
+  .adv-rev__vf{font-family:var(--fm);font-size:10px;letter-spacing:.06em;color:var(--gd);margin:0}
+  .adv-rev__s{color:var(--g2);letter-spacing:2px;font-size:12px;margin-left:auto}
+  .adv-rev__q{font-size:14px;line-height:1.6;color:var(--body);margin:0}
+</style>
+
+<div class="shield-adv">
+  <section>
+    <div class="adv-wrap">
+      <div class="adv-rev">
+        <div class="adv-rev__head">
+          <div class="adv-rev__score">{{ section.settings.score }}</div>
+          <div>
+            <div class="adv-rev__stars">★★★★★</div>
+            <p class="adv-rev__count">{{ section.settings.count_text }}</p>
+          </div>
+        </div>
+        <div class="adv-rev__grid">
+          {%- for block in section.blocks -%}
+            <div class="adv-rev__card" {{ block.shopify_attributes }}>
+              <div class="adv-rev__top">
+                <div class="adv-rev__ava">{{ block.settings.name | slice: 0 | upcase }}</div>
+                <div>
+                  <p class="adv-rev__name">{{ block.settings.name }}</p>
+                  {%- if block.settings.verified -%}<p class="adv-rev__vf">✓ Compra verificada</p>{%- endif -%}
+                </div>
+                <span class="adv-rev__s">★★★★★</span>
+              </div>
+              <p class="adv-rev__q">{{ block.settings.quote }}</p>
+            </div>
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+{% schema %}
+{
+  "name": "SHIELD adv · Reseñas",
+  "tag": "section",
+  "max_blocks": 12,
+  "settings": [
+    { "type": "text", "id": "score", "label": "Puntaje", "default": "4.8" },
+    { "type": "text", "id": "count_text", "label": "Texto de cantidad", "default": "Basado en reseñas de clientes" }
+  ],
+  "blocks": [
+    { "type": "review", "name": "Reseña", "settings": [
+      { "type": "text", "id": "name", "label": "Nombre" },
+      { "type": "checkbox", "id": "verified", "label": "Compra verificada", "default": true },
+      { "type": "textarea", "id": "quote", "label": "Texto" }
+    ] }
+  ],
+  "presets": [{
+    "name": "SHIELD adv · Reseñas",
+    "blocks": [
+      { "type": "review", "settings": { "name": "Lucas", "quote": "Había probado de todo y nada me duraba. A las semanas la espalda me cambió un montón. Lo recomiendo." } },
+      { "type": "review", "settings": { "name": "Carla", "quote": "Se lo compré a mi hijo. Lo usa solo en la ducha y se lo nota más seguro." } },
+      { "type": "review", "settings": { "name": "Martín", "quote": "Simple de usar y no me reseca como otros jabones. Muy contento." } },
+      { "type": "review", "settings": { "name": "Diego", "quote": "Llegó rápido y el envío fue gratis. La piel del pecho la noto más pareja." } }
+    ]
+  }]
+}
+{% endschema %}

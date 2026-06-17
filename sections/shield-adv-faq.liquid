@@ -1,0 +1,59 @@
+{%- comment -%} SHIELD advertorial — FAQ (blanco) {%- endcomment -%}
+<style>
+  .shield-adv{--ink:#0B0B0C;--body:#33333a;--muted:#7a7a82;--line:#ece8dd;--g2:#967434;--gd:#7d5e28;--fd:"Big Shoulders Display",Impact,sans-serif;--fm:"Space Mono",monospace;--fb:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:#fff;color:var(--body);font-family:var(--fb)}
+  .adv-wrap{max-width:740px;margin:0 auto;padding:0 22px}
+  .adv-faq{padding:34px 0 48px;border-top:1px solid var(--line)}
+  .adv-rnum{font-family:var(--fm);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gd);margin:0 0 6px}
+  .adv-rt{font-family:var(--fd);font-weight:700;text-transform:uppercase;line-height:1.04;color:var(--ink);font-size:clamp(22px,4.2vw,32px);margin:0 0 16px}
+  .adv-faq__item{border-bottom:1px solid var(--line)}
+  .adv-faq__item summary{cursor:pointer;list-style:none;padding:18px 0;font-family:var(--fd);font-weight:700;text-transform:uppercase;font-size:clamp(15px,2.3vw,18px);color:var(--ink);display:flex;justify-content:space-between;align-items:center;gap:14px}
+  .adv-faq__item summary::-webkit-details-marker{display:none}
+  .adv-faq__item summary::after{content:"+";color:var(--g2);font-size:22px;font-family:var(--fm);transition:transform .2s ease}
+  .adv-faq__item[open] summary::after{transform:rotate(45deg)}
+  .adv-faq__a{font-size:15px;line-height:1.7;color:var(--body);padding:0 0 18px;margin:0}
+</style>
+
+<div class="shield-adv">
+  <section>
+    <div class="adv-wrap">
+      <div class="adv-faq">
+        {%- if section.settings.kicker != blank -%}<p class="adv-rnum">{{ section.settings.kicker }}</p>{%- endif -%}
+        <h2 class="adv-rt">{{ section.settings.title }}</h2>
+        {%- for block in section.blocks -%}
+          <details class="adv-faq__item" {{ block.shopify_attributes }}>
+            <summary>{{ block.settings.q }}</summary>
+            <div class="adv-faq__a">{{ block.settings.a }}</div>
+          </details>
+        {%- endfor -%}
+      </div>
+    </div>
+  </section>
+</div>
+
+{% schema %}
+{
+  "name": "SHIELD adv · FAQ",
+  "tag": "section",
+  "max_blocks": 12,
+  "settings": [
+    { "type": "text", "id": "kicker", "label": "Mini-bajada", "default": "Dudas frecuentes" },
+    { "type": "text", "id": "title", "label": "Título", "default": "Preguntas frecuentes" }
+  ],
+  "blocks": [
+    { "type": "faq", "name": "Pregunta", "settings": [
+      { "type": "text", "id": "q", "label": "Pregunta" },
+      { "type": "richtext", "id": "a", "label": "Respuesta" }
+    ] }
+  ],
+  "presets": [{
+    "name": "SHIELD adv · FAQ",
+    "blocks": [
+      { "type": "faq", "settings": { "q": "¿Cómo se usa?", "a": "<p>En la ducha, como un jabón: aplicás sobre la piel húmeda, dejás actuar un minuto y enjuagás. Todos los días.</p>" } },
+      { "type": "faq", "settings": { "q": "¿En cuánto tiempo se ven cambios?", "a": "<p>Cada piel es distinta. La clave es la constancia: usado a diario, muchos notan cambios en algunas semanas.</p>" } },
+      { "type": "faq", "settings": { "q": "¿Sirve para espalda y pecho?", "a": "<p>Sí. Está pensado para las zonas del cuerpo donde la piel suda y se roza: espalda, pecho y hombros.</p>" } },
+      { "type": "faq", "settings": { "q": "¿Reseca la piel?", "a": "<p>Lleva ceramidas y ácido hialurónico para cuidar la barrera y ayudar a que no se reseque ni se irrite.</p>" } },
+      { "type": "faq", "settings": { "q": "¿Cómo es el envío y la garantía?", "a": "<p>Envío gratis a todo el país y 100 días de garantía: si no ves cambios, te devolvemos todo.</p>" } }
+    ]
+  }]
+}
+{% endschema %}

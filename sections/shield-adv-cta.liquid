@@ -1,0 +1,75 @@
+{%- comment -%} SHIELD advertorial — Bloque CTA "Ver más" {%- endcomment -%}
+<style>
+  .shield-adv{--ink:#0B0B0C;--body:#33333a;--muted:#7a7a82;--line:#ece8dd;--g1:#E7CD8C;--g2:#967434;--gd:#7d5e28;--gold:linear-gradient(135deg,#E7CD8C,#967434);--fd:"Big Shoulders Display",Impact,sans-serif;--fm:"Space Mono",monospace;--fb:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:#fff;color:var(--body);font-family:var(--fb)}
+  .shield-adv img{max-width:100%;height:auto;display:block}
+  .adv-wrap{max-width:740px;margin:0 auto;padding:0 22px}
+  .adv-cta{margin:34px 0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#0B0B0C;color:#F4F1EA}
+  .adv-cta__pad{padding:34px 26px;text-align:center}
+  .adv-cta__img{max-width:200px;margin:0 auto 18px;border-radius:8px}
+  .adv-cta__eyebrow{font-family:var(--fm);font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--g1);margin:0 0 10px}
+  .adv-cta__t{font-family:var(--fd);font-weight:900;text-transform:uppercase;line-height:1.02;font-size:clamp(26px,5vw,40px);margin:0 0 8px}
+  .adv-cta__t .g{background:var(--gold);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .adv-cta__sub{font-size:15px;line-height:1.6;color:#cfcabb;margin:0 auto 22px;max-width:420px}
+  .adv-cta__perks{list-style:none;padding:0;margin:0 0 24px;display:flex;flex-wrap:wrap;justify-content:center;gap:8px 18px}
+  .adv-cta__perks li{font-family:var(--fm);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--g1)}
+  .adv-cta__perks li::before{content:"◆ ";color:var(--g2)}
+  .adv-btn{display:inline-block;font-family:var(--fd);font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:17px;background:var(--gold);color:#1a1408;padding:16px 40px;border-radius:6px;text-decoration:none;transition:transform .15s ease}
+  .adv-btn:hover{transform:translateY(-2px)}
+  .adv-cta__fine{font-size:12px;color:#9a958a;margin:16px 0 0}
+</style>
+
+<div class="shield-adv">
+  <section>
+    <div class="adv-wrap">
+      <div class="adv-cta">
+        <div class="adv-cta__pad">
+          {%- assign prod = all_products[section.settings.product_handle] -%}
+          {%- if section.settings.image != blank -%}
+            <img class="adv-cta__img" src="{{ section.settings.image | image_url: width: 480 }}" alt="{{ section.settings.title | escape }}" loading="lazy">
+          {%- elsif prod != blank and prod.featured_image != blank -%}
+            <img class="adv-cta__img" src="{{ prod.featured_image | image_url: width: 480 }}" alt="{{ prod.title | escape }}" loading="lazy">
+          {%- endif -%}
+          {%- if section.settings.eyebrow != blank -%}<p class="adv-cta__eyebrow">{{ section.settings.eyebrow }}</p>{%- endif -%}
+          <h2 class="adv-cta__t">{{ section.settings.title }}</h2>
+          {%- if section.settings.subtitle != blank -%}<p class="adv-cta__sub">{{ section.settings.subtitle }}</p>{%- endif -%}
+          {%- if section.blocks.size > 0 -%}
+            <ul class="adv-cta__perks">
+              {%- for block in section.blocks -%}<li {{ block.shopify_attributes }}>{{ block.settings.text }}</li>{%- endfor -%}
+            </ul>
+          {%- endif -%}
+          <a class="adv-btn" href="{{ section.settings.cta_link | default: '#' }}">{{ section.settings.cta_label }}</a>
+          {%- if section.settings.fine != blank -%}<p class="adv-cta__fine">{{ section.settings.fine }}</p>{%- endif -%}
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+{% schema %}
+{
+  "name": "SHIELD adv · CTA Ver más",
+  "tag": "section",
+  "max_blocks": 4,
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Bajada", "default": "Conocé el producto" },
+    { "type": "textarea", "id": "title", "label": "Título", "default": "Mirá SHIELD en detalle" },
+    { "type": "textarea", "id": "subtitle", "label": "Subtítulo", "default": "Ingredientes, modo de uso y la oferta de lanzamiento con 100 días de garantía." },
+    { "type": "text", "id": "cta_label", "label": "Texto del botón", "default": "Ver más" },
+    { "type": "url", "id": "cta_link", "label": "Link del botón (página de producto)" },
+    { "type": "text", "id": "fine", "label": "Línea fina", "default": "Envío gratis · 100 días de garantía" },
+    { "type": "image_picker", "id": "image", "label": "Imagen (si vacía, usa la del producto)" },
+    { "type": "text", "id": "product_handle", "label": "Handle del producto", "default": "shield-gel-antiacne-corporal" }
+  ],
+  "blocks": [
+    { "type": "perk", "name": "Beneficio", "settings": [ { "type": "text", "id": "text", "label": "Texto" } ] }
+  ],
+  "presets": [{
+    "name": "SHIELD adv · CTA Ver más",
+    "blocks": [
+      { "type": "perk", "settings": { "text": "50% OFF" } },
+      { "type": "perk", "settings": { "text": "Envío gratis" } },
+      { "type": "perk", "settings": { "text": "100 días de garantía" } }
+    ]
+  }]
+}
+{% endschema %}

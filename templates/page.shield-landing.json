@@ -1,66 +1,51 @@
 {
   "sections": {
-    "hero": {
-      "type": "shield-hero",
+    "adv_hero": {
+      "type": "shield-adv-hero",
       "settings": {
         "logo_text": "SHIELD",
-        "eyebrow": "Tecnología antiacné para hombres",
-        "title": "Adiós al acné de la espalda",
-        "subtitle": "El gel antiacné corporal de limpieza profunda. Se usa en la ducha, como un jabón. Todos los días, sin rutinas complicadas.",
-        "badge_num": "50%",
-        "badge_text": "OFF + envío gratis esta semana",
-        "cta_label": "Quiero el mío",
-        "cta_link": "/products/shield-gel-antiacne-corporal",
-        "trust_text": "100 días de garantía · Envío gratis a todo el país"
+        "tag_text": "Nota patrocinada",
+        "eyebrow": "Cuidado de la piel masculina",
+        "title": "7 razones por las que cada vez más hombres cambian su jabón por SHIELD",
+        "author": "Redacción SHIELD",
+        "meta": "Actualizado hoy · 4 min de lectura",
+        "lead": "<p>El acné en la espalda, el pecho y los hombros es más común de lo que se habla. Y la mayoría de los jabones no llegan al fondo del poro: resecan, irritan y no limpian de verdad. Reunimos las razones por las que tantos hombres están sumando <strong>SHIELD</strong> a su ducha diaria.</p>",
+        "product_handle": "shield-gel-antiacne-corporal"
       }
     },
-    "problem": {
-      "type": "shield-problem",
+    "adv_reasons": {
+      "type": "shield-advertorial",
       "blocks": {
-        "p1": { "type": "parrafo", "settings": { "text": "<p>Se tapan con la remera incluso con calor. Evitan la playa, el pileteo, sacarse la ropa adelante de otros. De a poco, se van apagando.</p>" } },
-        "p2": { "type": "parrafo", "settings": { "text": "<p>Y <strong>no es culpa de nadie</strong>: el acné aparece donde la piel del cuerpo suda y se roza, y la mayoría de los jabones lo resecan o no limpian en profundidad.</p>" } }
+        "r1": { "type": "reason", "settings": { "kicker": "Es más común de lo que creés", "title": "El acné corporal le pasa a un montón de hombres", "show_placeholder": true, "placeholder_label": "Foto lifestyle / espalda", "body": "<p>No es falta de higiene ni timidez. La piel del cuerpo es más gruesa, suda y se roza: el poro se tapa por dentro y se inflama. Por eso aparece en <strong>espalda, pecho y hombros</strong>, justo donde más incomoda.</p>", "show_more": false } },
+        "r2": { "type": "reason", "settings": { "kicker": "Se nota con el uso", "title": "Los cambios se ven en la piel", "show_placeholder": true, "placeholder_label": "Antes / Después", "body": "<p>Usado todos los días, muchos notan la piel <strong>más limpia y pareja</strong> en algunas semanas. La clave no es un milagro: es la constancia de una buena limpieza profunda.</p>", "show_more": true } },
+        "r3": { "type": "reason", "settings": { "kicker": "Cuida, no maltrata", "title": "Limpia a fondo sin resecar la piel", "show_placeholder": true, "placeholder_label": "Textura del gel", "body": "<p>La mayoría de los jabones resecan o irritan. SHIELD limpia en profundidad y a la vez <strong>cuida la barrera de la piel</strong> con ceramidas y ácido hialurónico.</p>", "show_more": false } },
+        "r4": { "type": "reason", "settings": { "kicker": "Pensado para el cuerpo", "title": "No es un producto facial adaptado", "show_placeholder": true, "placeholder_label": "Producto en uso", "body": "<p>Está formulado para las zonas del cuerpo donde el acné aparece por sudor y roce. <strong>Para el cuerpo del hombre</strong>, no una crema de cara reutilizada.</p>", "show_more": false } },
+        "r5": { "type": "reason", "settings": { "kicker": "Súper simple", "title": "Es una rutina de ducha de 1 minuto", "show_placeholder": true, "placeholder_label": "En la ducha", "body": "<p>Se usa como un jabón: aplicás, dejás actuar un minuto y enjuagás. <strong>Sin rutinas complicadas</strong>, todos los días.</p>", "show_more": true } },
+        "r6": { "type": "reason", "settings": { "kicker": "Cero riesgo", "title": "Respaldado por 100 días de garantía", "show_placeholder": true, "placeholder_label": "Sello 100 días", "body": "<p>Envío gratis a todo el país y <strong>100 días de garantía</strong>: si no ves cambios, te devolvemos todo. Sin vueltas.</p>", "show_more": true } }
       },
-      "block_order": ["p1", "p2"],
+      "block_order": ["r1", "r2", "r3", "r4", "r5", "r6"],
       "settings": {
-        "eyebrow": "No es timidez",
-        "title": "El acné de la espalda hace que muchos se escondan"
+        "more_label": "Ver más",
+        "more_link": "/products/shield-gel-antiacne-corporal"
       }
     },
-    "ingredients": {
-      "type": "shield-ingredients",
+    "adv_ingredients": {
+      "type": "shield-adv-ingredients",
       "blocks": {
-        "a1": { "type": "activo", "settings": { "name": "Peróxido de benzoilo micronizado", "desc": "Partículas tan chicas que llegan al fondo del poro, donde arranca el problema." } },
-        "a2": { "type": "activo", "settings": { "name": "Niacinamida", "desc": "Ayuda a regular la grasa y a calmar la rojez." } },
-        "a3": { "type": "activo", "settings": { "name": "Ácido glicólico", "desc": "Acompaña la renovación de la piel y ayuda con las marcas que deja el acné." } },
-        "a4": { "type": "activo", "settings": { "name": "Ceramidas + ácido hialurónico", "desc": "Reparan e hidratan, para que la piel no se reseque ni se irrite." } }
+        "a1": { "type": "activo", "settings": { "name": "Peróxido de benzoilo micronizado", "desc": "Partículas chicas que llegan al fondo del poro." } },
+        "a2": { "type": "activo", "settings": { "name": "Niacinamida", "desc": "Ayuda a regular la grasa y la rojez." } },
+        "a3": { "type": "activo", "settings": { "name": "Ácido glicólico", "desc": "Acompaña la renovación y las marcas." } },
+        "a4": { "type": "activo", "settings": { "name": "Ceramidas + ácido hialurónico", "desc": "Reparan e hidratan sin resecar." } }
       },
       "block_order": ["a1", "a2", "a3", "a4"],
       "settings": {
-        "lead": "Cuatro activos que trabajan juntos: limpian a fondo y cuidan la barrera de la piel."
+        "number": "",
+        "kicker": "Lo que tiene adentro",
+        "title": "Activos que limpian a fondo y cuidan la piel"
       }
     },
-    "how": {
-      "type": "shield-how",
-      "blocks": {
-        "s1": { "type": "paso", "settings": { "title": "Aplicá", "desc": "En la ducha, sobre la piel húmeda de la zona afectada." } },
-        "s2": { "type": "paso", "settings": { "title": "Dejá actuar", "desc": "Esperá un minuto para que el gel haga su trabajo en profundidad." } },
-        "s3": { "type": "paso", "settings": { "title": "Enjuagá", "desc": "Listo. Todos los días, sin rutinas complicadas." } }
-      },
-      "block_order": ["s1", "s2", "s3"],
-      "settings": { "title": "Se usa en la ducha, como un jabón" }
-    },
-    "testimonials": {
-      "type": "shield-testimonials",
-      "blocks": {
-        "t1": { "type": "testimonio", "settings": { "quote": "Había probado de todo y nada me duraba. A las semanas la espalda me cambió un montón y volví a la playa sin remera.", "name": "Lucas, 24" } },
-        "t2": { "type": "testimonio", "settings": { "quote": "Se lo compré a mi hijo. Lo usa en la ducha solo, sin que le insista, y se lo nota más seguro.", "name": "Carla, mamá de Tomás" } },
-        "t3": { "type": "testimonio", "settings": { "quote": "Simple de usar y no me reseca la piel como otros jabones. Lo recomiendo.", "name": "Martín, 29" } }
-      },
-      "block_order": ["t1", "t2", "t3"],
-      "settings": { "title": "Volvieron a sentirse cómodos en su piel" }
-    },
-    "offer": {
-      "type": "shield-offer",
+    "adv_cta_mid": {
+      "type": "shield-adv-cta",
       "blocks": {
         "k1": { "type": "perk", "settings": { "text": "50% OFF" } },
         "k2": { "type": "perk", "settings": { "text": "Envío gratis" } },
@@ -68,26 +53,62 @@
       },
       "block_order": ["k1", "k2", "k3"],
       "settings": {
-        "big_num": "50",
-        "big_num_small": "% OFF",
-        "title": "Empezá hoy tu rutina SHIELD",
-        "cta_label": "Quiero el mío con 50% OFF",
+        "eyebrow": "Conocé el producto",
+        "title": "Mirá SHIELD en detalle",
+        "subtitle": "Ingredientes, modo de uso y la oferta de lanzamiento con 100 días de garantía.",
+        "cta_label": "Ver más",
         "cta_link": "/products/shield-gel-antiacne-corporal",
-        "guarantee": "100 días de garantía: si no ves cambios, te devolvemos todo. Sin vueltas."
+        "fine": "Envío gratis · 100 días de garantía",
+        "product_handle": "shield-gel-antiacne-corporal"
       }
     },
-    "faq": {
-      "type": "shield-faq",
+    "adv_reviews": {
+      "type": "shield-adv-reviews",
       "blocks": {
-        "f1": { "type": "faq", "settings": { "q": "¿Cómo se usa?", "a": "<p>En la ducha, como un jabón: aplicás sobre la piel húmeda de la zona afectada, dejás actuar un minuto y enjuagás. Todos los días.</p>" } },
+        "v1": { "type": "review", "settings": { "name": "Lucas", "verified": true, "quote": "Había probado de todo y nada me duraba. A las semanas la espalda me cambió un montón. Lo recomiendo." } },
+        "v2": { "type": "review", "settings": { "name": "Carla", "verified": true, "quote": "Se lo compré a mi hijo. Lo usa solo en la ducha y se lo nota más seguro." } },
+        "v3": { "type": "review", "settings": { "name": "Martín", "verified": true, "quote": "Simple de usar y no me reseca como otros jabones. Muy contento." } },
+        "v4": { "type": "review", "settings": { "name": "Diego", "verified": true, "quote": "Llegó rápido y el envío fue gratis. La piel del pecho la noto más pareja." } }
+      },
+      "block_order": ["v1", "v2", "v3", "v4"],
+      "settings": {
+        "score": "4.8",
+        "count_text": "Basado en reseñas de clientes"
+      }
+    },
+    "adv_faq": {
+      "type": "shield-adv-faq",
+      "blocks": {
+        "f1": { "type": "faq", "settings": { "q": "¿Cómo se usa?", "a": "<p>En la ducha, como un jabón: aplicás sobre la piel húmeda, dejás actuar un minuto y enjuagás. Todos los días.</p>" } },
         "f2": { "type": "faq", "settings": { "q": "¿En cuánto tiempo se ven cambios?", "a": "<p>Cada piel es distinta. La clave es la constancia: usado a diario, muchos notan cambios en algunas semanas.</p>" } },
-        "f3": { "type": "faq", "settings": { "q": "¿Sirve para la espalda y el pecho?", "a": "<p>Sí. Está pensado para las zonas del cuerpo donde la piel suda y se roza, como espalda, pecho y hombros.</p>" } },
-        "f4": { "type": "faq", "settings": { "q": "¿Reseca la piel?", "a": "<p>Lleva ceramidas y ácido hialurónico para cuidar la barrera de la piel y ayudar a que no se reseque ni se irrite.</p>" } },
-        "f5": { "type": "faq", "settings": { "q": "¿Cómo es la garantía y el envío?", "a": "<p>Envío gratis a todo el país y 100 días de garantía: si no ves cambios, te devolvemos todo.</p>" } }
+        "f3": { "type": "faq", "settings": { "q": "¿Sirve para espalda y pecho?", "a": "<p>Sí. Está pensado para las zonas del cuerpo donde la piel suda y se roza: espalda, pecho y hombros.</p>" } },
+        "f4": { "type": "faq", "settings": { "q": "¿Reseca la piel?", "a": "<p>Lleva ceramidas y ácido hialurónico para cuidar la barrera y ayudar a que no se reseque ni se irrite.</p>" } },
+        "f5": { "type": "faq", "settings": { "q": "¿Cómo es el envío y la garantía?", "a": "<p>Envío gratis a todo el país y 100 días de garantía: si no ves cambios, te devolvemos todo.</p>" } }
       },
       "block_order": ["f1", "f2", "f3", "f4", "f5"],
-      "settings": { "title": "Preguntas frecuentes" }
+      "settings": {
+        "kicker": "Dudas frecuentes",
+        "title": "Preguntas frecuentes"
+      }
+    },
+    "adv_cta_final": {
+      "type": "shield-adv-cta",
+      "blocks": {
+        "k1": { "type": "perk", "settings": { "text": "50% OFF" } },
+        "k2": { "type": "perk", "settings": { "text": "Envío gratis" } },
+        "k3": { "type": "perk", "settings": { "text": "100 días de garantía" } }
+      },
+      "block_order": ["k1", "k2", "k3"],
+      "settings": {
+        "eyebrow": "Listo para probarlo",
+        "title": "Conocé SHIELD",
+        "subtitle": "Mirá todos los detalles del producto y aprovechá la oferta de lanzamiento.",
+        "cta_label": "Ver más",
+        "cta_link": "/products/shield-gel-antiacne-corporal",
+        "fine": "Envío gratis · 100 días de garantía",
+        "product_handle": "shield-gel-antiacne-corporal"
+      }
     }
   },
-  "order": ["hero", "problem", "ingredients", "how", "testimonials", "offer", "faq"]
+  "order": ["adv_hero", "adv_reasons", "adv_ingredients", "adv_cta_mid", "adv_reviews", "adv_faq", "adv_cta_final"]
 }

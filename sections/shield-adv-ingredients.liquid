@@ -1,0 +1,60 @@
+{%- comment -%} SHIELD advertorial — Ingredientes (cards blancas) {%- endcomment -%}
+<style>
+  .shield-adv{--ink:#0B0B0C;--body:#33333a;--muted:#7a7a82;--line:#ece8dd;--g2:#967434;--gd:#7d5e28;--gold:linear-gradient(135deg,#E7CD8C,#967434);--fd:"Big Shoulders Display",Impact,sans-serif;--fm:"Space Mono",monospace;--fb:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:#fff;color:var(--body);font-family:var(--fb)}
+  .adv-wrap{max-width:740px;margin:0 auto;padding:0 22px}
+  .adv-ing{padding:34px 0;border-top:1px solid var(--line)}
+  .adv-rnum{font-family:var(--fm);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gd);margin:0 0 6px}
+  .adv-rnum b{font-family:var(--fd);font-weight:900;font-size:20px;vertical-align:-2px;margin-right:6px;background:var(--gold);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .adv-rt{font-family:var(--fd);font-weight:700;text-transform:uppercase;line-height:1.04;color:var(--ink);font-size:clamp(22px,4.2vw,32px);margin:0 0 20px}
+  .adv-ing__grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .adv-ing__card{border:1px solid var(--line);border-left:3px solid var(--g2);border-radius:8px;padding:18px}
+  .adv-ing__n{font-family:var(--fd);font-weight:700;text-transform:uppercase;font-size:16px;color:var(--ink);margin:0 0 6px}
+  .adv-ing__d{font-size:14px;line-height:1.55;color:var(--body);margin:0}
+</style>
+
+<div class="shield-adv">
+  <section>
+    <div class="adv-wrap">
+      <div class="adv-ing">
+        {%- if section.settings.kicker != blank -%}<p class="adv-rnum">{%- if section.settings.number != blank -%}<b>{{ section.settings.number }}.</b>{%- endif -%}{{ section.settings.kicker }}</p>{%- endif -%}
+        <h2 class="adv-rt">{{ section.settings.title }}</h2>
+        <div class="adv-ing__grid">
+          {%- for block in section.blocks -%}
+            <div class="adv-ing__card" {{ block.shopify_attributes }}>
+              <p class="adv-ing__n">{{ block.settings.name }}</p>
+              <p class="adv-ing__d">{{ block.settings.desc }}</p>
+            </div>
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+{% schema %}
+{
+  "name": "SHIELD adv · Ingredientes",
+  "tag": "section",
+  "max_blocks": 8,
+  "settings": [
+    { "type": "text", "id": "number", "label": "Número (opcional)", "default": "" },
+    { "type": "text", "id": "kicker", "label": "Mini-bajada", "default": "Lo que tiene adentro" },
+    { "type": "text", "id": "title", "label": "Título", "default": "Activos que limpian a fondo y cuidan la piel" }
+  ],
+  "blocks": [
+    { "type": "activo", "name": "Activo", "settings": [
+      { "type": "text", "id": "name", "label": "Nombre" },
+      { "type": "textarea", "id": "desc", "label": "Descripción" }
+    ] }
+  ],
+  "presets": [{
+    "name": "SHIELD adv · Ingredientes",
+    "blocks": [
+      { "type": "activo", "settings": { "name": "Peróxido de benzoilo micronizado", "desc": "Partículas chicas que llegan al fondo del poro." } },
+      { "type": "activo", "settings": { "name": "Niacinamida", "desc": "Ayuda a regular la grasa y la rojez." } },
+      { "type": "activo", "settings": { "name": "Ácido glicólico", "desc": "Acompaña la renovación y las marcas." } },
+      { "type": "activo", "settings": { "name": "Ceramidas + ácido hialurónico", "desc": "Reparan e hidratan sin resecar." } }
+    ]
+  }]
+}
+{% endschema %}

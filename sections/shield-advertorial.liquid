@@ -1,0 +1,76 @@
+{%- comment -%} SHIELD advertorial — Razones numeradas (listicle) {%- endcomment -%}
+<style>
+  .shield-adv{--ink:#0B0B0C;--body:#33333a;--muted:#7a7a82;--line:#ece8dd;--g1:#E7CD8C;--g2:#967434;--gd:#7d5e28;--gold:linear-gradient(135deg,#E7CD8C,#967434);--fd:"Big Shoulders Display",Impact,sans-serif;--fm:"Space Mono",monospace;--fb:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:#fff;color:var(--body);font-family:var(--fb)}
+  .shield-adv img{max-width:100%;height:auto;display:block}
+  .adv-wrap{max-width:740px;margin:0 auto;padding:0 22px}
+  .adv-reason{padding:34px 0;border-top:1px solid var(--line)}
+  .adv-reason:first-child{border-top:0}
+  .adv-rnum{font-family:var(--fm);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gd);margin:0 0 6px}
+  .adv-rnum b{font-family:var(--fd);font-weight:900;font-size:20px;vertical-align:-2px;margin-right:6px;background:var(--gold);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .adv-rt{font-family:var(--fd);font-weight:700;text-transform:uppercase;line-height:1.04;color:var(--ink);font-size:clamp(22px,4.2vw,32px);margin:0 0 16px}
+  .adv-rimg{border-radius:10px;border:1px solid var(--line);margin:0 0 18px}
+  .adv-ph{border:1px dashed var(--g2);border-radius:10px;background:linear-gradient(180deg,rgba(231,205,140,.07),rgba(231,205,140,0));aspect-ratio:16/10;display:flex;align-items:center;justify-content:center;margin:0 0 18px}
+  .adv-ph span{font-family:var(--fm);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gd)}
+  .adv-rbody{font-size:clamp(15px,2.1vw,17px);line-height:1.7;color:var(--body);margin:0}
+  .adv-rbody strong{color:var(--ink)}
+  .adv-more{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-family:var(--fm);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gd);text-decoration:none;border-bottom:1px solid var(--g2);padding-bottom:2px}
+  .adv-more:hover{color:var(--ink);border-color:var(--ink)}
+</style>
+
+<div class="shield-adv">
+  <section>
+    <div class="adv-wrap">
+      {%- assign i = 0 -%}
+      {%- for block in section.blocks -%}
+        {%- assign i = i | plus: 1 -%}
+        <div class="adv-reason" {{ block.shopify_attributes }}>
+          <p class="adv-rnum"><b>{{ i }}.</b>{{ block.settings.kicker }}</p>
+          <h2 class="adv-rt">{{ block.settings.title }}</h2>
+          {%- if block.settings.image != blank -%}
+            <img class="adv-rimg" src="{{ block.settings.image | image_url: width: 1000 }}" alt="{{ block.settings.title | escape }}" loading="lazy">
+          {%- elsif block.settings.show_placeholder -%}
+            <div class="adv-ph"><span>{{ block.settings.placeholder_label }}</span></div>
+          {%- endif -%}
+          <div class="adv-rbody">{{ block.settings.body }}</div>
+          {%- if block.settings.show_more -%}
+            <a class="adv-more" href="{{ section.settings.more_link | default: '#' }}">{{ section.settings.more_label }} →</a>
+          {%- endif -%}
+        </div>
+      {%- endfor -%}
+    </div>
+  </section>
+</div>
+
+{% schema %}
+{
+  "name": "SHIELD adv · Razones",
+  "tag": "section",
+  "max_blocks": 12,
+  "settings": [
+    { "type": "text", "id": "more_label", "label": "Texto del link 'Ver más'", "default": "Ver más" },
+    { "type": "url", "id": "more_link", "label": "Link 'Ver más' (página de producto)" }
+  ],
+  "blocks": [
+    { "type": "reason", "name": "Razón", "settings": [
+      { "type": "text", "id": "kicker", "label": "Mini-bajada", "default": "La razón" },
+      { "type": "text", "id": "title", "label": "Título" },
+      { "type": "image_picker", "id": "image", "label": "Imagen" },
+      { "type": "checkbox", "id": "show_placeholder", "label": "Mostrar marco si no hay imagen", "default": true },
+      { "type": "text", "id": "placeholder_label", "label": "Texto del marco vacío", "default": "Imagen (antes / después)" },
+      { "type": "richtext", "id": "body", "label": "Texto" },
+      { "type": "checkbox", "id": "show_more", "label": "Mostrar link 'Ver más'", "default": false }
+    ] }
+  ],
+  "presets": [{
+    "name": "SHIELD adv · Razones",
+    "blocks": [
+      { "type": "reason", "settings": { "kicker": "Es más común de lo que creés", "title": "El acné corporal le pasa a un montón de hombres", "placeholder_label": "Foto lifestyle / espalda", "body": "<p>No es falta de higiene ni timidez. La piel del cuerpo es más gruesa, suda y se roza: el poro se tapa por dentro y se inflama. Por eso aparece en <strong>espalda, pecho y hombros</strong>, justo donde más incomoda.</p>" } },
+      { "type": "reason", "settings": { "kicker": "Se nota con el uso", "title": "Los cambios se ven en la piel", "placeholder_label": "Antes / Después", "body": "<p>Usado todos los días, muchos notan la piel <strong>más limpia y pareja</strong> en algunas semanas. La clave no es un milagro: es la constancia de una buena limpieza profunda.</p>", "show_more": true } },
+      { "type": "reason", "settings": { "kicker": "Cuida, no maltrata", "title": "Limpia a fondo sin resecar la piel", "placeholder_label": "Textura del gel", "body": "<p>La mayoría de los jabones resecan o irritan. SHIELD limpia en profundidad y a la vez <strong>cuida la barrera de la piel</strong> con ceramidas y ácido hialurónico.</p>" } },
+      { "type": "reason", "settings": { "kicker": "Pensado para el cuerpo", "title": "No es un producto facial adaptado", "placeholder_label": "Producto en uso", "body": "<p>Está formulado para las zonas del cuerpo donde el acné aparece por sudor y roce. <strong>Para el cuerpo del hombre</strong>, no una crema de cara reutilizada.</p>" } },
+      { "type": "reason", "settings": { "kicker": "Súper simple", "title": "Es una rutina de ducha de 1 minuto", "placeholder_label": "En la ducha", "body": "<p>Se usa como un jabón: aplicás, dejás actuar un minuto y enjuagás. <strong>Sin rutinas complicadas</strong>, todos los días.</p>", "show_more": true } },
+      { "type": "reason", "settings": { "kicker": "Cero riesgo", "title": "Respaldado por 100 días de garantía", "placeholder_label": "Sello 100 días", "body": "<p>Envío gratis a todo el país y <strong>100 días de garantía</strong>: si no ves cambios, te devolvemos todo. Sin vueltas.</p>", "show_more": true } }
+    ]
+  }]
+}
+{% endschema %}
