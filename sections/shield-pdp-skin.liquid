@@ -84,6 +84,35 @@
   #MainContent .caption, #MainContent .caption-large {
     font-family:"Space Mono","Courier New",monospace; letter-spacing:.05em; color:#8A6722;
   }
+
+  /* === Filas desplegables (acordeones) en negro === */
+  #MainContent .collapsible-content summary, #MainContent .accordion summary,
+  #MainContent .product__accordion summary, #MainContent .accordion__title,
+  #MainContent summary .h4, #MainContent summary > * {
+    background:none !important; -webkit-text-fill-color:#0B0B0C !important; color:#0B0B0C !important;
+  }
+
+  /* === Zona dorada: del fin de la info de producto hasta el footer (degradé continuo) === */
+  #shopify-section-rich_text_VHifmL{background:linear-gradient(180deg,#EBCE82,#E1C06C)!important}
+  #shopify-section-image_with_text_6NJQ98{background:linear-gradient(180deg,#E1C06C,#D7B257)!important}
+  #shopify-section-image_with_text_8wqzxh{background:linear-gradient(180deg,#D7B257,#CDA445)!important}
+  #shopify-section-rich_text_d7MAiq{background:linear-gradient(180deg,#CDA445,#C39637)!important}
+  #shopify-section-results_bTnYR4{background:linear-gradient(180deg,#C39637,#B98A2E)!important}
+  #shopify-section-ds_testimonials_RaQjhC{background:linear-gradient(180deg,#B98A2E,#AF7E28)!important}
+  #shopify-section-rich_text_rxajnn{background:linear-gradient(180deg,#AF7E28,#A57323)!important}
+  #shopify-section-collapsible_content_ea4B3M{background:linear-gradient(180deg,#A57323,#97691F)!important}
+  #shopify-section-ds_icon_bar_jE6Bhj{background:linear-gradient(180deg,#97691F,#8A6722)!important}
+
+  /* Interiores transparentes para que el degradé fluya continuo */
+  :is([id^="shopify-section-rich_text_"],[id^="shopify-section-image_with_text_"],#shopify-section-results_bTnYR4,#shopify-section-ds_testimonials_RaQjhC,#shopify-section-collapsible_content_ea4B3M,#shopify-section-ds_icon_bar_jE6Bhj) :is(.gradient,[class*="color-scheme-"],[class*="color-background-"]){
+    background:transparent !important; --gradient-background:transparent !important;
+  }
+
+  /* Texto y encabezados en negro dentro de la zona dorada */
+  :is([id^="shopify-section-rich_text_"],[id^="shopify-section-image_with_text_"],#shopify-section-results_bTnYR4,#shopify-section-ds_testimonials_RaQjhC,#shopify-section-collapsible_content_ea4B3M,#shopify-section-ds_icon_bar_jE6Bhj) :is(p,li,span,a,strong,em,.rte,td,th){ color:#0B0B0C !important; }
+  :is([id^="shopify-section-rich_text_"],[id^="shopify-section-image_with_text_"],#shopify-section-results_bTnYR4,#shopify-section-ds_testimonials_RaQjhC,#shopify-section-collapsible_content_ea4B3M,#shopify-section-ds_icon_bar_jE6Bhj) :is(h1,h2,h3,.h0,.h1,.h2,.h3,.title,.rich-text__heading){ background:none !important; -webkit-text-fill-color:#0B0B0C !important; color:#0B0B0C !important; }
+  :is([id^="shopify-section-rich_text_"],[id^="shopify-section-image_with_text_"],#shopify-section-results_bTnYR4,#shopify-section-ds_testimonials_RaQjhC,#shopify-section-collapsible_content_ea4B3M,#shopify-section-ds_icon_bar_jE6Bhj) .rich-text__heading::after{ background:#0B0B0C !important; }
+  :is([id^="shopify-section-rich_text_"],[id^="shopify-section-image_with_text_"],#shopify-section-results_bTnYR4,#shopify-section-ds_testimonials_RaQjhC,#shopify-section-collapsible_content_ea4B3M,#shopify-section-ds_icon_bar_jE6Bhj) :is(.rating-star,svg,.icon){ color:#0B0B0C !important; }
 </style>
 
 {% schema %}

@@ -316,6 +316,7 @@
     },
     "wd_section_divider_7abG8W": {
       "type": "wd-section-divider",
+      "disabled": true,
       "name": "t:sections.section-divider.name",
       "settings": {
         "divider_shape": "wavy",
@@ -408,6 +409,7 @@
     },
     "wd_section_divider_rc4VJR": {
       "type": "wd-section-divider",
+      "disabled": true,
       "name": "t:sections.section-divider.name",
       "settings": {
         "divider_shape": "wavy",
@@ -464,6 +466,7 @@
     },
     "wd_section_divider_JjL4rF": {
       "type": "wd-section-divider",
+      "disabled": true,
       "name": "t:sections.section-divider.name",
       "settings": {
         "divider_shape": "wavy",
@@ -517,6 +520,7 @@
     },
     "wd_section_divider_NXErbg": {
       "type": "wd-section-divider",
+      "disabled": true,
       "name": "t:sections.section-divider.name",
       "settings": {
         "divider_shape": "wavy",
@@ -841,6 +845,7 @@
     },
     "wd_section_divider_wkhe8c": {
       "type": "wd-section-divider",
+      "disabled": true,
       "name": "t:sections.section-divider.name",
       "settings": {
         "divider_shape": "wavy",
