@@ -21,7 +21,7 @@
         "r3": { "type": "reason", "settings": { "kicker": "Cuida, no maltrata", "title": "Limpia a fondo sin resecar la piel", "show_placeholder": true, "placeholder_label": "Textura del gel", "body": "<p>La mayoría de los jabones resecan o irritan. SHIELD limpia en profundidad y a la vez <strong>cuida la barrera de la piel</strong> con ceramidas y ácido hialurónico.</p>", "show_more": false } },
         "r4": { "type": "reason", "settings": { "kicker": "Pensado para el cuerpo", "title": "No es un producto facial adaptado", "show_placeholder": true, "placeholder_label": "Producto en uso", "body": "<p>Está formulado para las zonas del cuerpo donde el acné aparece por sudor y roce. <strong>Para el cuerpo del hombre</strong>, no una crema de cara reutilizada.</p>", "show_more": false } },
         "r5": { "type": "reason", "settings": { "kicker": "Súper simple", "title": "Es una rutina de ducha de 1 minuto", "show_placeholder": true, "placeholder_label": "En la ducha", "body": "<p>Se usa como un jabón: aplicás, dejás actuar un minuto y enjuagás. <strong>Sin rutinas complicadas</strong>, todos los días.</p>", "show_more": true } },
-        "r6": { "type": "reason", "settings": { "kicker": "Cero riesgo", "title": "Respaldado por 100 días de garantía", "show_placeholder": true, "placeholder_label": "Sello 100 días", "body": "<p>Envío gratis a todo el país y <strong>100 días de garantía</strong>: si no ves cambios, te devolvemos todo. Sin vueltas.</p>", "show_more": true } }
+        "r6": { "type": "reason", "settings": { "kicker": "Cero riesgo", "title": "Respaldado por 30 días de garantía", "show_placeholder": true, "placeholder_label": "Sello 30 días", "body": "<p>Envío gratis a todo el país y <strong>30 días de garantía</strong>: si no ves cambios, te devolvemos todo. Sin vueltas.</p>", "show_more": true } }
       },
       "block_order": ["r1", "r2", "r3", "r4", "r5", "r6"],
       "settings": {
@@ -49,16 +49,16 @@
       "blocks": {
         "k1": { "type": "perk", "settings": { "text": "50% OFF" } },
         "k2": { "type": "perk", "settings": { "text": "Envío gratis" } },
-        "k3": { "type": "perk", "settings": { "text": "100 días de garantía" } }
+        "k3": { "type": "perk", "settings": { "text": "30 días de garantía" } }
       },
       "block_order": ["k1", "k2", "k3"],
       "settings": {
         "eyebrow": "Conocé el producto",
         "title": "Mirá SHIELD en detalle",
-        "subtitle": "Ingredientes, modo de uso y la oferta de lanzamiento con 100 días de garantía.",
+        "subtitle": "Ingredientes, modo de uso y la oferta de lanzamiento con 30 días de garantía.",
         "cta_label": "Ver más",
         "cta_link": "/products/shield-gel-antiacne-corporal",
-        "fine": "Envío gratis · 100 días de garantía",
+        "fine": "Envío gratis · 30 días de garantía",
         "product_handle": "shield-gel-antiacne-corporal"
       }
     },
@@ -83,7 +83,7 @@
         "f2": { "type": "faq", "settings": { "q": "¿En cuánto tiempo se ven cambios?", "a": "<p>Cada piel es distinta. La clave es la constancia: usado a diario, muchos notan cambios en algunas semanas.</p>" } },
         "f3": { "type": "faq", "settings": { "q": "¿Sirve para espalda y pecho?", "a": "<p>Sí. Está pensado para las zonas del cuerpo donde la piel suda y se roza: espalda, pecho y hombros.</p>" } },
         "f4": { "type": "faq", "settings": { "q": "¿Reseca la piel?", "a": "<p>Lleva ceramidas y ácido hialurónico para cuidar la barrera y ayudar a que no se reseque ni se irrite.</p>" } },
-        "f5": { "type": "faq", "settings": { "q": "¿Cómo es el envío y la garantía?", "a": "<p>Envío gratis a todo el país y 100 días de garantía: si no ves cambios, te devolvemos todo.</p>" } }
+        "f5": { "type": "faq", "settings": { "q": "¿Cómo es el envío y la garantía?", "a": "<p>Envío gratis a todo el país y 30 días de garantía: si no ves cambios, te devolvemos todo.</p>" } }
       },
       "block_order": ["f1", "f2", "f3", "f4", "f5"],
       "settings": {
@@ -96,7 +96,7 @@
       "blocks": {
         "k1": { "type": "perk", "settings": { "text": "50% OFF" } },
         "k2": { "type": "perk", "settings": { "text": "Envío gratis" } },
-        "k3": { "type": "perk", "settings": { "text": "100 días de garantía" } }
+        "k3": { "type": "perk", "settings": { "text": "30 días de garantía" } }
       },
       "block_order": ["k1", "k2", "k3"],
       "settings": {
@@ -105,7 +105,7 @@
         "subtitle": "Mirá todos los detalles del producto y aprovechá la oferta de lanzamiento.",
         "cta_label": "Ver más",
         "cta_link": "/products/shield-gel-antiacne-corporal",
-        "fine": "Envío gratis · 100 días de garantía",
+        "fine": "Envío gratis · 30 días de garantía",
         "product_handle": "shield-gel-antiacne-corporal"
       }
     }
