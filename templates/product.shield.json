@@ -1,0 +1,863 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "related-products": {
+      "type": "related-products",
+      "disabled": true,
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "rating_stars_KqJMmE": {
+          "type": "rating_stars",
+          "settings": {
+            "rating": 4.7,
+            "star_color": "#ffcc00",
+            "bg_stars_style": "full",
+            "bg_star_color": "#ececec",
+            "label": "4.7/5 (8.931 Clientes Verificados)",
+            "size": 12,
+            "alignment": "flex-start",
+            "margin_top": 0,
+            "margin_bottom": 0
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "text_size": "h1",
+            "title_alignment": "left",
+            "uppercase_title": false,
+            "margin_top": 0,
+            "margin_bottom": 0
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "layout": "price_second",
+            "price_color": "accent-1",
+            "compare_price_color": "accent-1",
+            "hide_sale_badge": true,
+            "margin_top": 0,
+            "margin_bottom": 0
+          }
+        },
+        "emoji_benefits_xFGiTn": {
+          "type": "emoji_benefits",
+          "settings": {
+            "benefits": "<p>✅ Conseguí tus resultados sin rutinas complicadas<br/></p><p> ✅Sentite mas cómodo mostrando tu cuerpo sin pensar en tu piel.<br/><br/> ✅ Elimina el acné corporal que lleva años en tu piel</p>",
+            "margin_top": 0,
+            "margin_bottom": 0
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_types": "swatches, pills",
+            "custom_labels": "[name]",
+            "swatches_custom_colors": "image_alt",
+            "swatches_custom_colors_list": "#000000, #D1DD1D, #0000FF, #FFCC00",
+            "margin_top": 0,
+            "margin_bottom": 0
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "disabled": true,
+          "settings": {
+            "enable_quantity_discounts": true,
+            "headline": "50% OFF TODAY ONLY",
+            "preselected": "option_1",
+            "display_badge": "option_2",
+            "badge_text": "Most Popular",
+            "enable_variant_selectors": true,
+            "color_scheme": "outline-button",
+            "option_1_quantity": 1,
+            "option_1_label": "",
+            "option_1_benefit": "",
+            "option_1_caption": "",
+            "option_1_percentage_off_text": "",
+            "option_1_fixed_amount_off": "0",
+            "option_1_compare_price": "price",
+            "option_2_quantity": 3,
+            "option_2_label": "Buy 2, Get 1 FREE",
+            "option_2_benefit": "Free Shipping",
+            "option_2_caption": "",
+            "option_2_percentage_off_text": "",
+            "option_2_fixed_amount_off": "24.9",
+            "option_2_compare_price": "compare_price",
+            "option_3_quantity": 5,
+            "option_3_label": "Buy 3, Get 2 FREE",
+            "option_3_benefit": "Free Shipping",
+            "option_3_caption": "",
+            "option_3_percentage_off_text": "0",
+            "option_3_fixed_amount_off": "49.8",
+            "option_3_compare_price": "compare_price",
+            "option_4_quantity": 0,
+            "option_4_label": "",
+            "option_4_benefit": "",
+            "option_4_caption": "",
+            "option_4_percentage_off_text": "",
+            "option_4_fixed_amount_off": "",
+            "option_4_compare_price": "compare_price",
+            "margin_top": 6,
+            "margin_bottom": 0
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "skip_cart": false,
+            "uppercase_text": false,
+            "enable_custom_color": false,
+            "custom_color": "#6d388b",
+            "margin_top": 0,
+            "margin_bottom": 0,
+            "alignment": "center"
+          }
+        },
+        "icon_with_text_w7ha4y": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "vertical",
+            "icon_size": "small",
+            "icon_1": "truck",
+            "heading_1": "ENVIO GRÁTIS",
+            "icon_2": "heart",
+            "heading_2": "30 DÍAS DE GARANTÍA",
+            "icon_3": "chat_bubble",
+            "heading_3": "SOPORTE 24/7",
+            "margin_top": 0,
+            "margin_bottom": 0
+          }
+        },
+        "sticky_atc_xbBkLM": {
+          "type": "sticky_atc",
+          "disabled": true,
+          "settings": {
+            "function": "add_to_cart",
+            "display_when": "after_scroll",
+            "color_scheme": "background-1",
+            "button_label": "Add to cart",
+            "enable_custom_btn_color": true,
+            "custom_btn_color": "#bb7eeb",
+            "show_price_badge": true,
+            "show_variant_picker": true,
+            "desktop_show_title": true,
+            "desktop_show_price": true,
+            "mobile_show_title": true,
+            "mobile_show_price": true
+          }
+        },
+        "payment_badges_NNJJTd": {
+          "type": "payment_badges",
+          "disabled": true,
+          "settings": {
+            "enabled_payment_types": "american_express, apple_pay, bitcoin, google_pay, ideal, jcb, klarna, litecoin, maestro, master, paypal, shopify_pay, sofort, unionpay, visa",
+            "margin_top": 6,
+            "margin_bottom": 6
+          }
+        },
+        "estimated_shipping_jccxdG": {
+          "type": "estimated_shipping",
+          "disabled": true,
+          "settings": {
+            "display_icon": true,
+            "icon_size": "small",
+            "icon_alignment": "middle",
+            "message": "<p>Get it between <strong>[start_date]</strong> and <strong>[end_date]</strong>.</p>",
+            "min_shipping_days": 15,
+            "max_shipping_days": 30,
+            "date_format": "day_mm_dd",
+            "days_labels": "Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday",
+            "months_labels": "January, February, March, April, May, June, July, August, September, October, November, December",
+            "margin_top": 15,
+            "margin_bottom": 15
+          }
+        },
+        "reviews_wbqVgr": {
+          "type": "reviews",
+          "settings": {
+            "display_stars": true,
+            "star_color": "#ffcc00",
+            "avatar_alignment": "top",
+            "author_1": "Franco, 27 años, Córdoba",
+            "text_1": "<p><em>Probe de todo para los granitos de la espalda porque entreno seguido pero siempre volvían pero llevo un par de  semanas usando esto en la ducha y ya se me fueron.</em></p>",
+            "author_2": "Nadía, mamá de Tomás (16), Nuñez",
+            "text_2": "<p><br/><em>se lo compré a tomi porque lo veia incómodo con el acne en el pecho y tenia miedo porque otros productos le quemaron la piel, pero con su gel se le fueron sin dañarlo para nada<br/></em></p>",
+            "author_3": "Diego, 38 años, Mendoza",
+            "text_3": "<p><em>Pensé que después de los 35 ya me iba a quedar con mis granos en la espalda para siempre. Probé muchas cosas y nada me servia. Con su producto empecé a notar menos brotes por primera vez en años.</em></p>",
+            "margin_top": 0,
+            "margin_bottom": 0
+          }
+        },
+        "collapsible_tab_6mMkwr": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "🤔¿Que es Shield?",
+            "icon": "none",
+            "content": "<p></p><p><em>Shield es un gel de limpieza corporal antiacné diseñado específicamente para hombres con brotes en espalda, pecho y hombros. Su fórmula ayuda a combatir el acné corporal, limpiar profundamente los poros y reducir la acumulación de grasa e impurezas sin sumar rutinas complicadas.</em></p>",
+            "page": "",
+            "margin_top": 0,
+            "margin_bottom": 0
+          }
+        },
+        "collapsible_tab_TiKN9g": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "🔬 Respaldo científico e ingredientes",
+            "icon": "none",
+            "content": "<h2></h2><h2>Ingredientes respaldados por la ciencia para combatir el acné corporal masculino</h2><p><em>Nuestro enfoque combina activos que actúan sobre los principales factores involucrados en el acné corporal: exceso de sebo, obstrucción de poros, proliferación bacteriana, inflamación y alteración de la barrera cutánea.</em></p><h3>Curoxyl-42™</h3><p><strong>Función:</strong><br/><em>Ayuda a combatir las bacterias asociadas al acné corporal persistente y reducir la aparición de nuevos brotes en espalda, pecho y hombros.</em></p><p><strong>La ciencia detrás:</strong><br/><em>Actúa sobre microorganismos relacionados con el desarrollo del acné, incluyendo bacterias involucradas en la formación de brotes. Mantener controlada la proliferación bacteriana ayuda a disminuir la acumulación dentro del folículo pilosebáceo, uno de los mecanismos centrales del acné corporal persistente. Su acción está orientada a reducir la carga microbiana sin comprometer innecesariamente el equilibrio cutáneo.</em></p><h3>Niacinamida</h3><p><strong>Función:</strong><br/><em>Ayuda a equilibrar el exceso de grasa, disminuir la apariencia de rojeces y calmar la piel propensa a brotes.</em></p><p><strong>La ciencia detrás:</strong><br/><em>La niacinamida (vitamina B3) es un activo multifuncional ampliamente utilizado por su capacidad para modular la producción de sebo, reducir mediadores inflamatorios cutáneos y fortalecer la función barrera. También participa en la síntesis de ceramidas epidérmicas, favoreciendo una piel más resistente y menos reactiva frente a irritación o brotes recurrentes.</em></p><h3>Ceramidas</h3><p><strong>Función:</strong><br/><em>Ayudan a reforzar la barrera cutánea y disminuir la resequedad que pueden generar otros tratamientos antiacné.</em></p><p><strong>La ciencia detrás:</strong><br/><em>Las ceramidas son lípidos estructurales presentes naturalmente en el estrato córneo y representan una parte esencial de la barrera cutánea. Mantener niveles adecuados ayuda a reducir la pérdida transepidérmica de agua (TEWL), mejorar la integridad de la piel y minimizar irritación, especialmente importante cuando se utilizan ingredientes exfoliantes o purificantes.</em></p><h3>Ácido Hialurónico</h3><p><strong>Función:</strong><br/><em>Ayuda a mantener hidratación profunda y mejorar el confort de la piel durante el tratamiento del acné corporal.</em></p><p><strong>La ciencia detrás:</strong><br/><em>El ácido hialurónico funciona como humectante de alta capacidad higroscópica, atrayendo y reteniendo moléculas de agua dentro de la superficie cutánea. Mantener niveles adecuados de hidratación favorece una mejor función barrera y ayuda a compensar la deshidratación que puede aparecer cuando se utilizan ingredientes activos para combatir brotes.</em></p><h3>Glicerina</h3><p><strong>Función:</strong><br/><em>Ayuda a mantener la piel hidratada, cómoda y menos propensa a la sensación de tirantez.</em></p><p><strong>La ciencia detrás:</strong><br/><em>La glicerina es uno de los humectantes más estudiados en dermatología cosmética. Su capacidad para atraer agua hacia el estrato córneo mejora hidratación superficial, elasticidad y función barrera, ayudando a mantener la piel equilibrada incluso durante rutinas enfocadas en controlar brotes.</em></p><h3>Ácido Glicólico</h3><p><strong>Función:</strong><br/><em>Ayuda a exfoliar la piel, destapar poros y reducir acumulación de células muertas asociadas a brotes recurrentes.</em></p><p><strong>La ciencia detrás:</strong><br/><em>El ácido glicólico pertenece a los alfa hidroxiácidos (AHAs) y actúa promoviendo descamación controlada mediante disminución de la cohesión entre corneocitos superficiales. Esto favorece la renovación celular, ayuda a prevenir obstrucción folicular y mejora textura irregular causada por brotes recurrentes o marcas post-acné.</em></p>",
+            "page": "",
+            "margin_top": 0,
+            "margin_bottom": 0
+          }
+        },
+        "collapsible_tab_KBWQmp": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "🚛 Politicas de envio",
+            "icon": "none",
+            "content": "<h1></h1><h2>Cobertura</h2><p>Realizamos envíos a todo el territorio de la República Argentina a través de operadores logísticos habilitados.</p><h2>Tiempos de procesamiento</h2><p>Los pedidos son procesados y despachados una vez confirmado el pago.</p><p>El tiempo de preparación del pedido puede variar entre 24 y 72 horas hábiles.</p><h2>Tiempos estimados de entrega</h2><p>Los plazos de entrega son estimados y pueden variar según la localidad de destino y la empresa de transporte seleccionada.</p><ul><li>AMBA: entre 2 y 5 días hábiles.</li><li>Principales ciudades del interior: entre 3 y 7 días hábiles.</li><li>Zonas alejadas o de difícil acceso: entre 5 y 12 días hábiles.</li></ul><p>Los plazos indicados son estimativos y pueden verse afectados por factores ajenos a nuestra empresa.</p><h2>Seguimiento del pedido</h2><p>Una vez despachado el pedido, el cliente recibirá un número de seguimiento para consultar el estado de su envío.</p><h2>Costos de envío</h2><p>El costo de envío será informado antes de finalizar la compra y dependerá de la ubicación de entrega, promociones vigentes y modalidad seleccionada.</p><h2>Datos de entrega</h2><p>Es responsabilidad del cliente proporcionar datos correctos y completos para la entrega del pedido.</p><p>No nos responsabilizamos por demoras o inconvenientes ocasionados por información incorrecta o incompleta proporcionada al momento de la compra.</p><h2>Ausencia en el domicilio</h2><p>Si al momento de la entrega no hubiera una persona disponible para recibir el pedido, la empresa de transporte podrá realizar nuevas visitas o derivar el paquete a una sucursal de retiro según sus políticas operativas.</p><h2>Daños o inconvenientes durante el transporte</h2><p>Si el pedido llegara dañado o presentara algún inconveniente atribuible al transporte, el cliente deberá comunicarse con nuestro equipo de atención dentro de las 48 horas posteriores a la recepción para evaluar el caso.</p><h2>Fuerza mayor</h2><p>No seremos responsables por demoras ocasionadas por causas ajenas a nuestro control, incluyendo pero no limitándose a eventos climáticos, conflictos gremiales, restricciones logísticas o situaciones extraordinarias que afecten el transporte de mercancías.</p><h2>Contacto</h2><p>Ante cualquier consulta relacionada con tu envío, podés comunicarte con nuestro equipo de atención al cliente a través de los canales de contacto publicados en nuestro sitio web.</p>",
+            "page": "",
+            "margin_top": 0,
+            "margin_bottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "rating_stars_KqJMmE",
+        "title",
+        "price",
+        "emoji_benefits_xFGiTn",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "icon_with_text_w7ha4y",
+        "sticky_atc_xbBkLM",
+        "payment_badges_NNJJTd",
+        "estimated_shipping_jccxdG",
+        "reviews_wbqVgr",
+        "collapsible_tab_6mMkwr",
+        "collapsible_tab_TiKN9g",
+        "collapsible_tab_KBWQmp"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "display_variant_image_first": true,
+        "disable_prepend": false,
+        "media_size": "small",
+        "constrain_to_viewport": false,
+        "media_fit": "cover",
+        "gallery_layout": "thumbnail_slider",
+        "media_position": "left",
+        "image_zoom": "none",
+        "hide_variants": false,
+        "desktop_thumbnails_count": 4,
+        "video_player": "play_btn",
+        "enable_video_looping": false,
+        "autoplay_videos_pause_btn": true,
+        "play_btn_color_scheme": "background-1",
+        "mobile_thumbnails": "show",
+        "mobile_media_corner_radius": 0,
+        "mobile_spacing": true,
+        "mobile_preview_media": true,
+        "mobile_thumbnails_count": 5,
+        "mobile_pagination": "dots_under",
+        "hide_arrows": true,
+        "dots_color_scheme": "inverse",
+        "trust_badge_position": "top-right",
+        "trust_badge_size": "small",
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": 0,
+        "desktop_padding_top": 0,
+        "desktop_padding_bottom": 0
+      }
+    },
+    "wd_section_divider_7abG8W": {
+      "type": "wd-section-divider",
+      "name": "t:sections.section-divider.name",
+      "settings": {
+        "divider_shape": "wavy",
+        "divider_color_top": "#f7f5e9",
+        "divider_color_bottom": "#8b857e",
+        "padding_top_desktop": 40,
+        "padding_bottom_desktop": 28,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 28,
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "max_height_desktop": 55,
+        "max_height_mobile": 50
+      }
+    },
+    "rich_text_VHifmL": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_DXpVCn": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p><br/>Estás cansado de tus mismos granitos de siempre?....</p><p>                                                                     Recuperá tu confianza con Shield.<br/><br/></p>",
+            "heading_size": "h1"
+          }
+        },
+        "text_At36J7": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Descubrí nuestra fórmula avanzada que limpia,refresca e hidrata tu piel.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_DXpVCn",
+        "text_At36J7"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "accent-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "custom_colors_background": "#ffffff",
+        "custom_gradient_background": "",
+        "custom_colors_text": "#2e2a39",
+        "custom_colors_solid_button_background": "#dd1d1d",
+        "custom_colors_solid_button_text": "#ffffff"
+      }
+    },
+    "image_with_text_6NJQ98": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_hJVTy3": {
+          "type": "heading",
+          "settings": {
+            "heading": "¿Por qué sigue apareciendo el acné corporal?",
+            "heading_size": "h2"
+          }
+        },
+        "text_apQhMK": {
+          "type": "text",
+          "settings": {
+            "text": "<p></p><p><br/>La piel masculina produce más sebo y suele ser más gruesa, lo que favorece la <strong>obstrucción de los poros</strong> y la <strong>aparición de brotes.<br/></strong><br/>✔ Bacterias asociadas al acné<br/>✔ Exceso de grasa<br/>✔ Poros obstruidos<br/>✔ Irritación y resequedad</p><h1></h1>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_hJVTy3",
+        "text_apQhMK"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/imagen_7.png",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "overlap",
+        "section_color_scheme": "scheme-8b459eb5-1b6a-48e6-baa3-637cdab6bfd1",
+        "color_scheme": "scheme-541ad50d-cdb8-4e5f-854e-6955f6b5103a",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "wd_section_divider_rc4VJR": {
+      "type": "wd-section-divider",
+      "name": "t:sections.section-divider.name",
+      "settings": {
+        "divider_shape": "wavy",
+        "divider_color_top": "#8b857e",
+        "divider_color_bottom": "#d4d4cc",
+        "padding_top_desktop": 40,
+        "padding_bottom_desktop": 40,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40,
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "max_height_desktop": 100,
+        "max_height_mobile": 100
+      }
+    },
+    "image_with_text_8wqzxh": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_MGgztr": {
+          "type": "heading",
+          "settings": {
+            "heading": "Ciencia respaldando cada aplicación para eliminar tu acné desde la ducha.",
+            "heading_size": "h2"
+          }
+        },
+        "text_KpKUUF": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Nuestra fórmula fue diseñada para actuar sobre los <strong>cinco factores clave</strong> asociados al acné corporal masculino.</p><p>✔ Proliferación bacteriana</p><p>✔ Exceso de sebo</p><p>✔ Obstrucción folicular</p><p>✔ Inflamación cutánea</p><p>✔ Alteración de la barrera de la piel</p><p>La combinación de estos 6 ingredientes permite <strong>eliminar el 97%</strong> del acné en 6 semanas  en <strong>una sola rutina de ducha.</strong></p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_MGgztr",
+        "text_KpKUUF"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/ChatGPT_Image_9_jun_2026_01_36_55_a.m..png",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "bottom",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-541ad50d-cdb8-4e5f-854e-6955f6b5103a",
+        "color_scheme": "scheme-8b459eb5-1b6a-48e6-baa3-637cdab6bfd1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "padding_top": 0,
+        "padding_bottom": 12
+      }
+    },
+    "wd_section_divider_JjL4rF": {
+      "type": "wd-section-divider",
+      "name": "t:sections.section-divider.name",
+      "settings": {
+        "divider_shape": "wavy",
+        "divider_color_top": "#d4d4cc",
+        "divider_color_bottom": "#8b857e",
+        "padding_top_desktop": 40,
+        "padding_bottom_desktop": 40,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40,
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "max_height_desktop": 100,
+        "max_height_mobile": 100
+      }
+    },
+    "rich_text_d7MAiq": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_ajHh4i": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p><br/>¿Qué cambia cuando el acné corporal deja de ser una preocupación?<br/><br/></p>",
+            "heading_size": "h2"
+          }
+        },
+        "text_Vrfa8P": {
+          "type": "text",
+          "settings": {
+            "text": "<p><br/>❌ Dejás de revisar tu espalda frente al espejo.</p><p>❌ Dejás de preguntarte si los demás notan los brotes.</p><p>❌ Dejás de elegir ropa para esconder tu piel.</p><p>Y empezás a <strong>sentirte más cómodo</strong> con tu imagen cada vez que vas al gimnasio, a la playa o simplemente te sacás la remera.</p><p>El gel antiacné de Shield fue desarrollado para ayudar a <strong>combatir</strong> los principales factores asociados al <strong>acné corporal masculino</strong>, favoreciendo una piel más limpia, equilibrada y saludable con el uso constante.</p><p>Porque la verdadera diferencia no es solo tener menos brotes.</p><p>Es <strong>recuperar la tranquilidad </strong>de sentirte seguro con tu cuerpo todos los días.<br/><br/><br/></p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_ajHh4i",
+        "text_Vrfa8P"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "left",
+        "color_scheme": "accent-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "custom_colors_background": "#ffffff",
+        "custom_gradient_background": "",
+        "custom_colors_text": "#2e2a39",
+        "custom_colors_solid_button_background": "#dd1d1d",
+        "custom_colors_solid_button_text": "#ffffff"
+      }
+    },
+    "wd_section_divider_NXErbg": {
+      "type": "wd-section-divider",
+      "name": "t:sections.section-divider.name",
+      "settings": {
+        "divider_shape": "wavy",
+        "divider_color_top": "#8b857e",
+        "divider_color_bottom": "#f7f5e9",
+        "padding_top_desktop": 40,
+        "padding_bottom_desktop": 28,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 28,
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "max_height_desktop": 55,
+        "max_height_mobile": 50
+      }
+    },
+    "results_bTnYR4": {
+      "type": "results",
+      "blocks": {
+        "row_VPaDh3": {
+          "type": "row",
+          "settings": {
+            "percentage": 92,
+            "row_text": "<p>Notó una <strong>piel más limpia y uniforme </strong>con menos imperfecciones visibles en espalda, pecho y hombros.</p>"
+          }
+        },
+        "row_9JBPWD": {
+          "type": "row",
+          "settings": {
+            "percentage": 97,
+            "row_text": "<p>Destacó la facilidad de incorporarlo a su rutina diaria durante la ducha, sin tratamientos complicados.</p><h3></h3>"
+          }
+        },
+        "row_Gzyxpt": {
+          "type": "row",
+          "settings": {
+            "percentage": 89,
+            "row_text": "<p>Afirmó sentirse mejor con la apariencia de su piel, ya que eliminar el acné corporal  significa<strong> recuperar seguridad y comodidad </strong>con tu cuerpo.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "row_VPaDh3",
+        "row_9JBPWD",
+        "row_Gzyxpt"
+      ],
+      "settings": {
+        "title": "¿Por qué tantos hombres eligen Shield?    👇🏼",
+        "heading_size": "h1",
+        "text": "",
+        "color_scheme": "custom",
+        "layout": "results_second",
+        "results_headline": "",
+        "results_headline_size": "h3",
+        "results_headline_alignment": "left",
+        "caption": "",
+        "button_label": "",
+        "link": "",
+        "button_style_secondary": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "custom_colors_background": "#f7f5e9",
+        "custom_gradient_background": "",
+        "custom_colors_text": "#000000",
+        "custom_colors_accent": "#8b857e",
+        "custom_colors_solid_button_background": "#000000",
+        "custom_colors_solid_button_text": "#dd1d1d",
+        "custom_colors_outline_button": "#dd1d1d"
+      }
+    },
+    "ds_testimonials_RaQjhC": {
+      "type": "ds-testimonials",
+      "blocks": {
+        "column_T4H4pJ": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/ChatGPT_Image_9_jun_2026_10_26_11_a.m._1.png",
+            "title": "Me sorprendió",
+            "text": "<p><br/><em>Pensé que iba a ser otro producto más de los que prometen mucho y hacen poco. Lo seguí usando porque no me irritó la piel como otros y con el tiempo noté menos granitos en los hombros y espalda.<br/></em><br/></p>",
+            "author": "Leandro, 26 años"
+          }
+        },
+        "column_aNaPpr": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/ChatGPT_Image_9_jun_2026_10_52_02_a.m..png",
+            "title": "Una locura",
+            "text": "<p><br/><em>Trabajo al aire libre y transpiro bastante durante el día. Siempre sentía que eso empeoraba mi espalda pero desde que incorporé Shield a mi rutina siento la piel mucho más limpia y suave. <br/><br/></em></p>",
+            "author": "Javier, 42 años"
+          }
+        },
+        "column_gQMexM": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/ChatGPT_Image_9_jun_2026_10_46_20_a.m..png",
+            "title": "Fue lo mejor para él",
+            "text": "<p><br/><em>Mi hijo había empezado a evitar actividades donde tenía que sacarse la remera y eso me preocupaba. Queria algo facíl porque no iba a seguir una rutina muy larga y Shield fue la mejor opción.<br/></em></p>",
+            "author": "Verónica, mamá de Lucas (17)"
+          }
+        },
+        "column_mqLmxC": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/ChatGPT_Image_9_jun_2026_11_00_37_a.m..png",
+            "title": "Gracias",
+            "text": "<p><br/><em>Pensé que después de los 30 esto ya no tenía solución. Llevaba años con granitos en el pecho y la espalda y nada me terminaba de funcionar. Con Shield empecé a notar cambios de verdad y hoy me siento mucho más cómodo con mi piel.<br/><br/></em></p>",
+            "author": "Gustavo, 38 años"
+          }
+        },
+        "column_Q6YnaC": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/WhatsApp_Image_2026-06-09_at_11.07.25.jpg",
+            "title": "Muy buen servicio",
+            "text": "<p><br/><em>Llegó rapidísimo y muy bien presentado, da confianza recibir un producto así. Ahora toca usarlo todos los días y esperar que haga lo suyo.<br/></em><br/></p>",
+            "author": "Joaquín, 21 años"
+          }
+        }
+      },
+      "block_order": [
+        "column_T4H4pJ",
+        "column_aNaPpr",
+        "column_gQMexM",
+        "column_mqLmxC",
+        "column_Q6YnaC"
+      ],
+      "name": "Testimonials",
+      "settings": {
+        "title": "Comentarios de nuestros clientes",
+        "heading_size": "h2",
+        "text": "",
+        "image_width": "full",
+        "image_ratio": "portrait",
+        "columns_desktop": 3,
+        "slider_preview": true,
+        "column_alignment": "center",
+        "show_stars": true,
+        "stars_color": "#ffd700",
+        "show_quotes": true,
+        "quotes_color_scheme": "accent-2",
+        "background_style": "primary",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "custom_colors_background": "#ffffff",
+        "custom_gradient_background": "",
+        "custom_colors_text": "#000000"
+      }
+    },
+    "rich_text_rxajnn": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_KUj33x": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>30 - DÍAS DE GARANTÍA!!</p>",
+            "heading_size": "h1"
+          }
+        },
+        "text_eUAUgn": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Respaldamos nuestros productos con una garantía sin riesgo de 30 días. Si no está completamente satisfecho con el pedido,simplemente comuniquese para su devolución y le reembolsaremos el importe total.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_KUj33x",
+        "text_eUAUgn"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 8,
+        "padding_bottom": 0,
+        "custom_colors_background": "#f7f5e9",
+        "custom_gradient_background": "",
+        "custom_colors_text": "#2e2a39",
+        "custom_colors_solid_button_background": "#dd1d1d",
+        "custom_colors_solid_button_text": "#ffffff"
+      }
+    },
+    "collapsible_content_ea4B3M": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_FNhWCy": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "¿Cómo se usa?",
+            "icon": "question_mark",
+            "row_content": "<h2></h2><p><em>Tan fácil como ducharte.</em></p><p><em>Aplicá Shield sobre la zona afectada, masajeá suavemente durante unos segundos y enjuagá normalmente.</em></p><p><em>No necesitás cremas, tratamientos complicados ni rutinas de varios pasos. Simplemente incorporalo a tu ducha diaria y dejá que sus ingredientes hagan su trabajo.</em></p><p><em>Porque la mejor rutina para combatir el acné corporal es la que realmente podés mantener todos los días.</em></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_C4HfAy": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "¿Shield sirve si llevo años con acné corporal?",
+            "icon": "question_mark",
+            "row_content": "<h2></h2><p><em>Sí, muchos de nuestros clientes llegan a Shield después de probar distintos jabones, cremas y tratamientos sin obtener los resultados que esperaban. Nuestra fórmula fue desarrollada específicamente para actuar sobre los factores más comunes asociados al acné corporal masculino: exceso de grasa, poros obstruidos, bacterias e inflamación.</em></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_AM8jDJ": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "¿Cuándo voy a empezar a notar resultados?",
+            "icon": "question_mark",
+            "row_content": "<p><em>Cada piel responde de manera diferente, pero muchas personas comienzan a notar mejoras visibles durante las primeras semanas de uso constante.</em></p><p><em>Los primeros cambios suelen ser una piel más limpia, menos grasa y una reducción progresiva de los brotes visibles. Con el uso continuo, la piel puede verse más uniforme y con menos imperfecciones asociadas al acné corporal.</em></p><p><em>Lo más importante es la constancia. El acné corporal no apareció de un día para el otro, y mejorar su apariencia también requiere tiempo. Por eso recomendamos incorporar Shield a tu rutina diaria y permitir que sus ingredientes actúen de forma progresiva sobre las principales causas de los brotes.</em></p><p><em>La mayoría de nuestros clientes coincide en algo: una vez que empiezan a notar los cambios, desearían haber comenzado antes.</em></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_Q6JFkU": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "¿Funciona en adolescentes?",
+            "icon": "question_mark",
+            "row_content": "<p><em>Sí, Shield puede ser utilizado por adolescentes que presentan acné corporal en espalda, pecho y hombros.</em></p><p><em>Muchos padres buscan una solución que sea simple de incorporar a la rutina diaria de sus hijos, y una de las ventajas de Shield es que se utiliza directamente durante la ducha, sin necesidad de seguir tratamientos complicados o múltiples pasos.</em></p><p><em>Su fórmula fue desarrollada para ayudar a combatir los factores más comunes asociados al acné corporal, como el exceso de grasa, la obstrucción de los poros y la acumulación de impurezas.</em></p><p><em>Con un uso constante, muchos usuarios comienzan a notar una piel más limpia, menos brotes visibles y una mejora progresiva en la apariencia general de la piel. Como ocurre con cualquier producto para el cuidado de la piel, los resultados pueden variar según cada persona.</em></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_DrfanL": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "¿Me va a dejar la piel seca o irritada como otros productos?",
+            "icon": "question_mark",
+            "row_content": "<p><em>Una de las principales quejas de quienes sufren acné corporal es que muchos tratamientos ayudan con los brotes, pero dejan la piel reseca, tirante o incómoda.</em></p><p><em>Por eso Shield combina ingredientes que ayudan a combatir el acné con activos hidratantes y de soporte de barrera cutánea como Ceramidas, Ácido Hialurónico y Glicerina.</em></p><p><em>Nuestro objetivo no es solo ayudar a reducir los brotes, sino también mantener la piel equilibrada, cómoda y saludable durante el uso diario.</em></p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_FNhWCy",
+        "collapsible_row_C4HfAy",
+        "collapsible_row_AM8jDJ",
+        "collapsible_row_Q6JFkU",
+        "collapsible_row_DrfanL"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "FAQ",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "section",
+        "color_scheme": "background-2",
+        "container_color_scheme": "background-2",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "custom_colors_background": "#ffffff",
+        "custom_gradient_background": "",
+        "custom_colors_text": "#000000",
+        "custom_contaner_colors_background": "#f7f5e9",
+        "custom_container_gradient_background": "",
+        "custom_contaner_colors_text": "#000000"
+      }
+    },
+    "ds_icon_bar_jE6Bhj": {
+      "type": "ds-icon-bar",
+      "blocks": {
+        "column_ziFLGe": {
+          "type": "column",
+          "settings": {
+            "icon": "truck",
+            "title": "Envío gratis",
+            "text": ""
+          }
+        },
+        "column_7LeRqb": {
+          "type": "column",
+          "settings": {
+            "icon": "heart",
+            "title": "Creamos lo mejor para tu piel",
+            "text": ""
+          }
+        },
+        "column_tmRmih": {
+          "type": "column",
+          "settings": {
+            "icon": "chat_bubble",
+            "title": "Atención al cliente 24/7",
+            "text": ""
+          }
+        },
+        "column_UPew8x": {
+          "type": "column",
+          "settings": {
+            "icon": "lock",
+            "title": "Seguimiento de pago y envío",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_ziFLGe",
+        "column_7LeRqb",
+        "column_tmRmih",
+        "column_UPew8x"
+      ],
+      "settings": {
+        "title": "PORQUE ELEGIRNOS 👇🏼",
+        "heading_size": "h1",
+        "text": "",
+        "icon_size": "small",
+        "columns_desktop": 4,
+        "icon_color": "accent-1",
+        "background_style": "none",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 12,
+        "padding_bottom": 0,
+        "custom_colors_background": "#f3f3f3",
+        "custom_gradient_background": "",
+        "custom_colors_text": "#000000"
+      }
+    },
+    "wd_section_divider_wkhe8c": {
+      "type": "wd-section-divider",
+      "name": "t:sections.section-divider.name",
+      "settings": {
+        "divider_shape": "wavy",
+        "divider_color_top": "#f7f5e9",
+        "divider_color_bottom": "#8b857e",
+        "padding_top_desktop": 40,
+        "padding_bottom_desktop": 40,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40,
+        "margin_top": -50,
+        "margin_bottom": 0,
+        "max_height_desktop": 65,
+        "max_height_mobile": 40
+      }
+    }
+  },
+  "order": [
+    "related-products",
+    "main",
+    "wd_section_divider_7abG8W",
+    "rich_text_VHifmL",
+    "image_with_text_6NJQ98",
+    "wd_section_divider_rc4VJR",
+    "image_with_text_8wqzxh",
+    "wd_section_divider_JjL4rF",
+    "rich_text_d7MAiq",
+    "wd_section_divider_NXErbg",
+    "results_bTnYR4",
+    "ds_testimonials_RaQjhC",
+    "rich_text_rxajnn",
+    "collapsible_content_ea4B3M",
+    "ds_icon_bar_jE6Bhj",
+    "wd_section_divider_wkhe8c"
+  ]
+}
