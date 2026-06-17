@@ -1,59 +1,81 @@
-{%- comment -%} SHIELD — Re-skin de la PDP al estilo advertorial (blanco + oro + negro). No cambia contenido, solo apariencia. {%- endcomment -%}
+{%- comment -%} SHIELD — Re-skin de la PDP al estilo advertorial (blanco + gama dorada + negro). No cambia contenido, solo apariencia. {%- endcomment -%}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;900&family=Italiana&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
-  /* Paleta: fuerza blanco + negro + oro en todos los esquemas dentro del contenido del producto */
+  /* === Paleta: blanco + gama dorada en todos los esquemas dentro del producto === */
   #MainContent [class*="color-scheme-"],
   #MainContent [class*="color-background-"],
   #MainContent .gradient {
     --color-background: 255,255,255;
     --gradient-background: #ffffff;
     --color-foreground: 11,11,12;
-    --color-button: 11,11,12;
-    --color-button-text: 244,241,234;
-    --color-secondary-button-label: 11,11,12;
-    --color-link: 150,116,52;
-    --color-base-accent-1: 150,116,52;
-    --color-base-accent-2: 125,94,40;
-    --color-icon: 150,116,52;
+    --color-button: 154,115,39;
+    --color-button-text: 26,20,8;
+    --color-secondary-button-label: 138,103,34;
+    --color-link: 138,103,34;
+    --color-base-accent-1: 154,115,39;
+    --color-base-accent-2: 124,94,32;
+    --color-icon: 154,115,39;
     --color-base-background-1: 255,255,255;
-    --color-base-background-2: 250,249,244;
+    --color-base-background-2: 250,248,240;
   }
   #MainContent { background:#fff; font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
 
-  /* Titulares al estilo advertorial */
+  /* === Encabezados en gama dorada (reemplaza el amarillo) === */
   #MainContent h1, #MainContent h2, #MainContent h3,
   #MainContent .h0, #MainContent .h1, #MainContent .h2, #MainContent .h3,
   #MainContent .title, #MainContent .product__title, #MainContent .rich-text__heading {
     font-family:"Big Shoulders Display",Impact,sans-serif !important;
-    text-transform:uppercase; letter-spacing:.01em; font-weight:700; color:#0B0B0C;
+    text-transform:uppercase; letter-spacing:.01em; font-weight:700;
+    background:linear-gradient(135deg,#C9A24A 0%,#8A6722 100%);
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+  }
+  /* Detalle: filete dorado bajo los títulos de sección */
+  #MainContent .rich-text__heading { padding-bottom:6px; }
+  #MainContent .rich-text__heading::after {
+    content:""; display:block; width:56px; height:3px; margin:14px auto 0;
+    background:linear-gradient(135deg,#E3C879,#9A7327); border-radius:2px;
   }
 
-  /* Botones primarios → degradé oro */
+  /* === Botón de compra: TODO dorado, sin bordes === */
   #MainContent .button:not(.button--secondary):not(.button--tertiary),
   #MainContent .product-form__submit,
   #MainContent .shopify-payment-button__button--unbranded,
   #MainContent .cart__checkout-button {
-    background:linear-gradient(135deg,#E7CD8C,#967434) !important;
-    color:#1a1408 !important; border:0 !important;
-    font-family:"Big Shoulders Display",Impact,sans-serif; text-transform:uppercase; letter-spacing:.06em;
+    background:linear-gradient(135deg,#E3C268 0%,#B8893C 45%,#9A7327 100%) !important;
+    color:#1a1408 !important;
+    border:0 !important; box-shadow:none !important;
+    font-family:"Big Shoulders Display",Impact,sans-serif; text-transform:uppercase; letter-spacing:.06em; font-weight:700;
   }
-  /* Botones secundarios → contorno negro */
+  /* Matar el borde pseudo-elemento que Dawn dibuja en los botones */
+  #MainContent .button::after, #MainContent .button::before,
+  #MainContent .product-form__submit::after,
+  #MainContent .shopify-payment-button__button--unbranded::after,
+  #MainContent .cart__checkout-button::after {
+    display:none !important; box-shadow:none !important; border:0 !important;
+  }
+  /* Botones secundarios: contorno dorado fino */
   #MainContent .button--secondary {
-    background:transparent !important; color:#0B0B0C !important;
-    box-shadow:0 0 0 1px #0B0B0C inset !important;
+    background:transparent !important; color:#8A6722 !important;
+    box-shadow:0 0 0 1px #B8893C inset !important;
     font-family:"Big Shoulders Display",Impact,sans-serif; text-transform:uppercase; letter-spacing:.06em;
   }
+  #MainContent .button--secondary::after { display:none !important; }
 
-  /* Acentos dorados */
-  #MainContent .rating-star { color:#967434; }
-  #MainContent .rte a, #MainContent a.link { color:#7d5e28; }
-
-  /* Etiquetas/captions en mono técnico */
-  #MainContent .caption, #MainContent .caption-large, #MainContent .product__tax {
-    font-family:"Space Mono","Courier New",monospace; letter-spacing:.04em;
+  /* === Detalles dorados extra === */
+  #MainContent .rating-star { color:#B8893C; }
+  #MainContent .rte a, #MainContent a.link { color:#8A6722; }
+  #MainContent .price { color:#0B0B0C; }
+  /* Bordes dorados suaves en acordeones / contenido colapsable */
+  #MainContent .accordion, #MainContent .product__accordion,
+  #MainContent .collapsible-content details, #MainContent .accordion details {
+    border-color:rgba(154,115,39,.28) !important;
+  }
+  /* Etiquetas chicas en mono dorado */
+  #MainContent .caption, #MainContent .caption-large {
+    font-family:"Space Mono","Courier New",monospace; letter-spacing:.05em; color:#8A6722;
   }
 </style>
 
@@ -62,7 +84,7 @@
   "name": "SHIELD · Estilo PDP",
   "tag": "section",
   "settings": [
-    { "type": "paragraph", "content": "Aplica la estética de la advertorial (blanco + oro + negro) a esta página de producto sin cambiar el contenido. Mantené esta sección al inicio del producto." }
+    { "type": "paragraph", "content": "Aplica la estética de la advertorial (blanco + gama dorada + negro) a esta página de producto sin cambiar el contenido. Mantené esta sección al inicio del producto." }
   ],
   "presets": [{ "name": "SHIELD · Estilo PDP" }]
 }
