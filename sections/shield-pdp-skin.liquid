@@ -32,6 +32,13 @@
     background:linear-gradient(135deg,#C9A24A 0%,#8A6722 100%);
     -webkit-background-clip:text; background-clip:text; color:transparent;
   }
+  /* El título del producto va en negro (no dorado) */
+  #MainContent .product__title, #MainContent .product__title * {
+    background:none !important;
+    -webkit-background-clip:border-box !important; background-clip:border-box !important;
+    -webkit-text-fill-color:#0B0B0C !important; color:#0B0B0C !important;
+  }
+
   /* Detalle: filete dorado bajo los títulos de sección */
   #MainContent .rich-text__heading { padding-bottom:6px; }
   #MainContent .rich-text__heading::after {
