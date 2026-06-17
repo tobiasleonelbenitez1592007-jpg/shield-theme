@@ -80,7 +80,7 @@
         "color_scheme": "background-2",
         "logo_link": "/",
         "logo_position": "middle-left",
-        "menu": "main-menu",
+        "menu": "",
         "menu_type_desktop": "dropdown",
         "highlight_active_link": true,
         "highlighted_link_color_scheme": "accent-1",
@@ -88,7 +88,7 @@
         "secondary_menu": "",
         "menu_color_scheme": "accent-1",
         "mobile_logo_position": "center",
-        "display_search": true,
+        "display_search": false,
         "margin_bottom": 0,
         "padding_top": 0,
         "padding_bottom": 0
