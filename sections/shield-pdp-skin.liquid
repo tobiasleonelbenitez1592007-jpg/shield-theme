@@ -1,0 +1,69 @@
+{%- comment -%} SHIELD — Re-skin de la PDP al estilo advertorial (blanco + oro + negro). No cambia contenido, solo apariencia. {%- endcomment -%}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;900&family=Italiana&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+  /* Paleta: fuerza blanco + negro + oro en todos los esquemas dentro del contenido del producto */
+  #MainContent [class*="color-scheme-"],
+  #MainContent [class*="color-background-"],
+  #MainContent .gradient {
+    --color-background: 255,255,255;
+    --gradient-background: #ffffff;
+    --color-foreground: 11,11,12;
+    --color-button: 11,11,12;
+    --color-button-text: 244,241,234;
+    --color-secondary-button-label: 11,11,12;
+    --color-link: 150,116,52;
+    --color-base-accent-1: 150,116,52;
+    --color-base-accent-2: 125,94,40;
+    --color-icon: 150,116,52;
+    --color-base-background-1: 255,255,255;
+    --color-base-background-2: 250,249,244;
+  }
+  #MainContent { background:#fff; font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
+
+  /* Titulares al estilo advertorial */
+  #MainContent h1, #MainContent h2, #MainContent h3,
+  #MainContent .h0, #MainContent .h1, #MainContent .h2, #MainContent .h3,
+  #MainContent .title, #MainContent .product__title, #MainContent .rich-text__heading {
+    font-family:"Big Shoulders Display",Impact,sans-serif !important;
+    text-transform:uppercase; letter-spacing:.01em; font-weight:700; color:#0B0B0C;
+  }
+
+  /* Botones primarios → degradé oro */
+  #MainContent .button:not(.button--secondary):not(.button--tertiary),
+  #MainContent .product-form__submit,
+  #MainContent .shopify-payment-button__button--unbranded,
+  #MainContent .cart__checkout-button {
+    background:linear-gradient(135deg,#E7CD8C,#967434) !important;
+    color:#1a1408 !important; border:0 !important;
+    font-family:"Big Shoulders Display",Impact,sans-serif; text-transform:uppercase; letter-spacing:.06em;
+  }
+  /* Botones secundarios → contorno negro */
+  #MainContent .button--secondary {
+    background:transparent !important; color:#0B0B0C !important;
+    box-shadow:0 0 0 1px #0B0B0C inset !important;
+    font-family:"Big Shoulders Display",Impact,sans-serif; text-transform:uppercase; letter-spacing:.06em;
+  }
+
+  /* Acentos dorados */
+  #MainContent .rating-star { color:#967434; }
+  #MainContent .rte a, #MainContent a.link { color:#7d5e28; }
+
+  /* Etiquetas/captions en mono técnico */
+  #MainContent .caption, #MainContent .caption-large, #MainContent .product__tax {
+    font-family:"Space Mono","Courier New",monospace; letter-spacing:.04em;
+  }
+</style>
+
+{% schema %}
+{
+  "name": "SHIELD · Estilo PDP",
+  "tag": "section",
+  "settings": [
+    { "type": "paragraph", "content": "Aplica la estética de la advertorial (blanco + oro + negro) a esta página de producto sin cambiar el contenido. Mantené esta sección al inicio del producto." }
+  ],
+  "presets": [{ "name": "SHIELD · Estilo PDP" }]
+}
+{% endschema %}

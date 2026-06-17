@@ -9,6 +9,10 @@
  */
 {
   "sections": {
+    "shield_pdp_skin": {
+      "type": "shield-pdp-skin",
+      "settings": {}
+    },
     "related-products": {
       "type": "related-products",
       "disabled": true,
@@ -854,6 +858,7 @@
     }
   },
   "order": [
+    "shield_pdp_skin",
     "related-products",
     "main",
     "shield_before_after",
