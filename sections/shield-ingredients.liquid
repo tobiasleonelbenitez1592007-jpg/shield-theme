@@ -1,0 +1,58 @@
+{%- comment -%} SHIELD landing — Ingredientes / activos {%- endcomment -%}
+<style>
+  .shield-ing{background:var(--sh-black);color:var(--sh-bone);padding:80px 24px}
+  .shield-ing__inner{max-width:960px;margin:0 auto}
+  .shield-ing__head{text-align:center;max-width:640px;margin:0 auto 48px}
+  .shield-ing__head .lead{font-size:clamp(15px,2vw,17px);line-height:1.6;color:#cfcabb;margin:14px 0 0}
+  .shield-ing__grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+  @media(min-width:760px){.shield-ing__grid{grid-template-columns:repeat(2,1fr)}}
+  .shield-ing__card{border:1px solid rgba(231,205,140,.18);border-radius:12px;padding:26px;background:linear-gradient(180deg,rgba(231,205,140,.04),rgba(231,205,140,0))}
+  .shield-ing__name{font-family:var(--sh-font-display);font-weight:700;text-transform:uppercase;font-size:clamp(18px,2.6vw,22px);margin:0 0 8px;background:var(--sh-gold);-webkit-background-clip:text;background-clip:text;color:transparent;display:inline-block}
+  .shield-ing__desc{font-size:15px;line-height:1.6;color:#cfcabb;margin:0}
+</style>
+
+<div class="shield-lp">
+  <section class="shield-ing">
+    <div class="shield-ing__inner">
+      <div class="shield-ing__head">
+        <p class="shield-sec-eyebrow">Qué tiene adentro</p>
+        <h2 class="shield-sec-title">Limpieza profunda, sin maltratar la piel</h2>
+        {%- if section.settings.lead != blank -%}<p class="lead">{{ section.settings.lead }}</p>{%- endif -%}
+      </div>
+      <div class="shield-ing__grid">
+        {%- for block in section.blocks -%}
+          <div class="shield-ing__card" {{ block.shopify_attributes }}>
+            <p class="shield-ing__name">{{ block.settings.name }}</p>
+            <p class="shield-ing__desc">{{ block.settings.desc }}</p>
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </section>
+</div>
+
+{% schema %}
+{
+  "name": "SHIELD · Ingredientes",
+  "tag": "section",
+  "max_blocks": 8,
+  "settings": [
+    { "type": "text", "id": "lead", "label": "Texto de apoyo", "default": "Cuatro activos que trabajan juntos: limpian a fondo y cuidan la barrera de la piel." }
+  ],
+  "blocks": [
+    { "type": "activo", "name": "Activo", "settings": [
+      { "type": "text", "id": "name", "label": "Nombre" },
+      { "type": "textarea", "id": "desc", "label": "Descripción" }
+    ] }
+  ],
+  "presets": [{
+    "name": "SHIELD · Ingredientes",
+    "blocks": [
+      { "type": "activo", "settings": { "name": "Peróxido de benzoilo micronizado", "desc": "Partículas tan chicas que llegan al fondo del poro, donde arranca el problema." } },
+      { "type": "activo", "settings": { "name": "Niacinamida", "desc": "Ayuda a regular la grasa y a calmar la rojez." } },
+      { "type": "activo", "settings": { "name": "Ácido glicólico", "desc": "Acompaña la renovación de la piel y ayuda con las marcas que deja el acné." } },
+      { "type": "activo", "settings": { "name": "Ceramidas + ácido hialurónico", "desc": "Reparan e hidratan, para que la piel no se reseque ni se irrite." } }
+    ]
+  }]
+}
+{% endschema %}

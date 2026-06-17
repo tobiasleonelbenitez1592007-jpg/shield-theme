@@ -1,0 +1,91 @@
+{
+  "sections": {
+    "hero": {
+      "type": "shield-hero",
+      "settings": {
+        "logo_text": "SHIELD",
+        "eyebrow": "Tecnología antiacné para hombres",
+        "title": "Adiós al acné de la espalda",
+        "subtitle": "El gel antiacné corporal de limpieza profunda. Se usa en la ducha, como un jabón. Todos los días, sin rutinas complicadas.",
+        "badge_num": "50%",
+        "badge_text": "OFF + envío gratis esta semana",
+        "cta_label": "Quiero el mío",
+        "trust_text": "100 días de garantía · Envío gratis a todo el país"
+      }
+    },
+    "problem": {
+      "type": "shield-problem",
+      "blocks": {
+        "p1": { "type": "parrafo", "settings": { "text": "<p>Se tapan con la remera incluso con calor. Evitan la playa, el pileteo, sacarse la ropa adelante de otros. De a poco, se van apagando.</p>" } },
+        "p2": { "type": "parrafo", "settings": { "text": "<p>Y <strong>no es culpa de nadie</strong>: el acné aparece donde la piel del cuerpo suda y se roza, y la mayoría de los jabones lo resecan o no limpian en profundidad.</p>" } }
+      },
+      "block_order": ["p1", "p2"],
+      "settings": {
+        "eyebrow": "No es timidez",
+        "title": "El acné de la espalda hace que muchos se escondan"
+      }
+    },
+    "ingredients": {
+      "type": "shield-ingredients",
+      "blocks": {
+        "a1": { "type": "activo", "settings": { "name": "Peróxido de benzoilo micronizado", "desc": "Partículas tan chicas que llegan al fondo del poro, donde arranca el problema." } },
+        "a2": { "type": "activo", "settings": { "name": "Niacinamida", "desc": "Ayuda a regular la grasa y a calmar la rojez." } },
+        "a3": { "type": "activo", "settings": { "name": "Ácido glicólico", "desc": "Acompaña la renovación de la piel y ayuda con las marcas que deja el acné." } },
+        "a4": { "type": "activo", "settings": { "name": "Ceramidas + ácido hialurónico", "desc": "Reparan e hidratan, para que la piel no se reseque ni se irrite." } }
+      },
+      "block_order": ["a1", "a2", "a3", "a4"],
+      "settings": {
+        "lead": "Cuatro activos que trabajan juntos: limpian a fondo y cuidan la barrera de la piel."
+      }
+    },
+    "how": {
+      "type": "shield-how",
+      "blocks": {
+        "s1": { "type": "paso", "settings": { "title": "Aplicá", "desc": "En la ducha, sobre la piel húmeda de la zona afectada." } },
+        "s2": { "type": "paso", "settings": { "title": "Dejá actuar", "desc": "Esperá un minuto para que el gel haga su trabajo en profundidad." } },
+        "s3": { "type": "paso", "settings": { "title": "Enjuagá", "desc": "Listo. Todos los días, sin rutinas complicadas." } }
+      },
+      "block_order": ["s1", "s2", "s3"],
+      "settings": { "title": "Se usa en la ducha, como un jabón" }
+    },
+    "testimonials": {
+      "type": "shield-testimonials",
+      "blocks": {
+        "t1": { "type": "testimonio", "settings": { "quote": "Había probado de todo y nada me duraba. A las semanas la espalda me cambió un montón y volví a la playa sin remera.", "name": "Lucas, 24" } },
+        "t2": { "type": "testimonio", "settings": { "quote": "Se lo compré a mi hijo. Lo usa en la ducha solo, sin que le insista, y se lo nota más seguro.", "name": "Carla, mamá de Tomás" } },
+        "t3": { "type": "testimonio", "settings": { "quote": "Simple de usar y no me reseca la piel como otros jabones. Lo recomiendo.", "name": "Martín, 29" } }
+      },
+      "block_order": ["t1", "t2", "t3"],
+      "settings": { "title": "Volvieron a sentirse cómodos en su piel" }
+    },
+    "offer": {
+      "type": "shield-offer",
+      "blocks": {
+        "k1": { "type": "perk", "settings": { "text": "50% OFF" } },
+        "k2": { "type": "perk", "settings": { "text": "Envío gratis" } },
+        "k3": { "type": "perk", "settings": { "text": "100 días de garantía" } }
+      },
+      "block_order": ["k1", "k2", "k3"],
+      "settings": {
+        "big_num": "50",
+        "big_num_small": "% OFF",
+        "title": "Empezá hoy tu rutina SHIELD",
+        "cta_label": "Quiero el mío con 50% OFF",
+        "guarantee": "100 días de garantía: si no ves cambios, te devolvemos todo. Sin vueltas."
+      }
+    },
+    "faq": {
+      "type": "shield-faq",
+      "blocks": {
+        "f1": { "type": "faq", "settings": { "q": "¿Cómo se usa?", "a": "<p>En la ducha, como un jabón: aplicás sobre la piel húmeda de la zona afectada, dejás actuar un minuto y enjuagás. Todos los días.</p>" } },
+        "f2": { "type": "faq", "settings": { "q": "¿En cuánto tiempo se ven cambios?", "a": "<p>Cada piel es distinta. La clave es la constancia: usado a diario, muchos notan cambios en algunas semanas.</p>" } },
+        "f3": { "type": "faq", "settings": { "q": "¿Sirve para la espalda y el pecho?", "a": "<p>Sí. Está pensado para las zonas del cuerpo donde la piel suda y se roza, como espalda, pecho y hombros.</p>" } },
+        "f4": { "type": "faq", "settings": { "q": "¿Reseca la piel?", "a": "<p>Lleva ceramidas y ácido hialurónico para cuidar la barrera de la piel y ayudar a que no se reseque ni se irrite.</p>" } },
+        "f5": { "type": "faq", "settings": { "q": "¿Cómo es la garantía y el envío?", "a": "<p>Envío gratis a todo el país y 100 días de garantía: si no ves cambios, te devolvemos todo.</p>" } }
+      },
+      "block_order": ["f1", "f2", "f3", "f4", "f5"],
+      "settings": { "title": "Preguntas frecuentes" }
+    }
+  },
+  "order": ["hero", "problem", "ingredients", "how", "testimonials", "offer", "faq"]
+}

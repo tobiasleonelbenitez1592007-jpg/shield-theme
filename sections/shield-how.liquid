@@ -1,0 +1,56 @@
+{%- comment -%} SHIELD landing — Cómo se usa (3 pasos) {%- endcomment -%}
+<style>
+  .shield-how{background:#111113;color:var(--sh-bone);padding:80px 24px}
+  .shield-how__inner{max-width:920px;margin:0 auto;text-align:center}
+  .shield-how__grid{display:grid;grid-template-columns:1fr;gap:28px;margin-top:44px}
+  @media(min-width:760px){.shield-how__grid{grid-template-columns:repeat(3,1fr)}}
+  .shield-how__step{padding:0 10px}
+  .shield-how__num{font-family:var(--sh-font-display);font-weight:900;font-size:54px;line-height:1;background:var(--sh-gold);-webkit-background-clip:text;background-clip:text;color:transparent;display:block;margin:0 0 12px}
+  .shield-how__t{font-family:var(--sh-font-display);font-weight:700;text-transform:uppercase;font-size:19px;margin:0 0 8px}
+  .shield-how__d{font-size:15px;line-height:1.6;color:#cfcabb;margin:0}
+</style>
+
+<div class="shield-lp">
+  <section class="shield-how">
+    <div class="shield-how__inner">
+      <p class="shield-sec-eyebrow">Más fácil imposible</p>
+      <h2 class="shield-sec-title">{{ section.settings.title }}</h2>
+      <div class="shield-how__grid">
+        {%- assign i = 0 -%}
+        {%- for block in section.blocks -%}
+          {%- assign i = i | plus: 1 -%}
+          <div class="shield-how__step" {{ block.shopify_attributes }}>
+            <span class="shield-how__num">{{ i }}</span>
+            <h3 class="shield-how__t">{{ block.settings.title }}</h3>
+            <p class="shield-how__d">{{ block.settings.desc }}</p>
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </section>
+</div>
+
+{% schema %}
+{
+  "name": "SHIELD · Cómo se usa",
+  "tag": "section",
+  "max_blocks": 4,
+  "settings": [
+    { "type": "textarea", "id": "title", "label": "Titular", "default": "Se usa en la ducha, como un jabón" }
+  ],
+  "blocks": [
+    { "type": "paso", "name": "Paso", "settings": [
+      { "type": "text", "id": "title", "label": "Título" },
+      { "type": "textarea", "id": "desc", "label": "Descripción" }
+    ] }
+  ],
+  "presets": [{
+    "name": "SHIELD · Cómo se usa",
+    "blocks": [
+      { "type": "paso", "settings": { "title": "Aplicá", "desc": "En la ducha, sobre la piel húmeda de la zona afectada." } },
+      { "type": "paso", "settings": { "title": "Dejá actuar", "desc": "Esperá un minuto para que el gel haga su trabajo en profundidad." } },
+      { "type": "paso", "settings": { "title": "Enjuagá", "desc": "Listo. Todos los días, sin rutinas complicadas." } }
+    ]
+  }]
+}
+{% endschema %}

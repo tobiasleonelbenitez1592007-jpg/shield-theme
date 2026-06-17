@@ -1,0 +1,58 @@
+{%- comment -%} SHIELD landing — Oferta / CTA final {%- endcomment -%}
+<style>
+  .shield-offer{background:#111113;color:var(--sh-bone);padding:90px 24px;text-align:center;position:relative;overflow:hidden}
+  .shield-offer__glow{position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(150,116,52,.22),transparent 60%);bottom:-220px;left:50%;transform:translateX(-50%);pointer-events:none}
+  .shield-offer__inner{max-width:620px;margin:0 auto;position:relative;z-index:2}
+  .shield-offer__num{font-family:var(--sh-font-display);font-weight:900;line-height:.85;font-size:clamp(90px,22vw,180px);background:var(--sh-gold);-webkit-background-clip:text;background-clip:text;color:transparent;margin:0}
+  .shield-offer__num small{font-size:.3em;vertical-align:super;letter-spacing:.05em}
+  .shield-offer__title{font-family:var(--sh-font-display);font-weight:700;text-transform:uppercase;font-size:clamp(24px,5vw,40px);margin:0 0 22px}
+  .shield-offer__perks{list-style:none;padding:0;margin:0 0 32px;display:flex;flex-wrap:wrap;justify-content:center;gap:10px 22px}
+  .shield-offer__perks li{font-family:var(--sh-font-mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--sh-gold1)}
+  .shield-offer__perks li::before{content:"◆ ";color:var(--sh-gold2)}
+  .shield-offer__guar{font-size:14px;line-height:1.6;color:#aaa595;margin:22px auto 0;max-width:440px}
+</style>
+
+<div class="shield-lp">
+  <section class="shield-offer" id="shield-oferta">
+    <div class="shield-offer__glow"></div>
+    <div class="shield-offer__inner">
+      <p class="shield-sec-eyebrow">Oferta de lanzamiento</p>
+      <p class="shield-offer__num">{{ section.settings.big_num }}<small>{{ section.settings.big_num_small }}</small></p>
+      <h2 class="shield-offer__title">{{ section.settings.title }}</h2>
+      <ul class="shield-offer__perks">
+        {%- for block in section.blocks -%}
+          <li {{ block.shopify_attributes }}>{{ block.settings.text }}</li>
+        {%- endfor -%}
+      </ul>
+      <a href="{{ section.settings.cta_link | default: '#' }}" class="shield-btn">{{ section.settings.cta_label }}</a>
+      {%- if section.settings.guarantee != blank -%}<p class="shield-offer__guar">{{ section.settings.guarantee }}</p>{%- endif -%}
+    </div>
+  </section>
+</div>
+
+{% schema %}
+{
+  "name": "SHIELD · Oferta",
+  "tag": "section",
+  "max_blocks": 4,
+  "settings": [
+    { "type": "text", "id": "big_num", "label": "Número grande", "default": "50" },
+    { "type": "text", "id": "big_num_small", "label": "Sufijo", "default": "% OFF" },
+    { "type": "textarea", "id": "title", "label": "Titular", "default": "Empezá hoy tu rutina SHIELD" },
+    { "type": "text", "id": "cta_label", "label": "Texto del botón", "default": "Quiero el mío con 50% OFF" },
+    { "type": "url", "id": "cta_link", "label": "Link del botón (producto)" },
+    { "type": "textarea", "id": "guarantee", "label": "Garantía", "default": "100 días de garantía: si no ves cambios, te devolvemos todo. Sin vueltas." }
+  ],
+  "blocks": [
+    { "type": "perk", "name": "Beneficio", "settings": [ { "type": "text", "id": "text", "label": "Texto" } ] }
+  ],
+  "presets": [{
+    "name": "SHIELD · Oferta",
+    "blocks": [
+      { "type": "perk", "settings": { "text": "50% OFF" } },
+      { "type": "perk", "settings": { "text": "Envío gratis" } },
+      { "type": "perk", "settings": { "text": "100 días de garantía" } }
+    ]
+  }]
+}
+{% endschema %}

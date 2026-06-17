@@ -1,0 +1,56 @@
+{%- comment -%} SHIELD landing — Preguntas frecuentes {%- endcomment -%}
+<style>
+  .shield-faq{background:var(--sh-black);color:var(--sh-bone);padding:80px 24px 96px}
+  .shield-faq__inner{max-width:680px;margin:0 auto}
+  .shield-faq__head{text-align:center;margin:0 0 40px}
+  .shield-faq__item{border-bottom:1px solid rgba(231,205,140,.16)}
+  .shield-faq__item summary{cursor:pointer;list-style:none;padding:22px 0;font-family:var(--sh-font-display);font-weight:700;text-transform:uppercase;font-size:clamp(16px,2.4vw,19px);display:flex;justify-content:space-between;align-items:center;gap:16px}
+  .shield-faq__item summary::-webkit-details-marker{display:none}
+  .shield-faq__item summary::after{content:"+";color:var(--sh-gold1);font-size:24px;font-family:var(--sh-font-mono);transition:transform .2s ease}
+  .shield-faq__item[open] summary::after{transform:rotate(45deg)}
+  .shield-faq__a{font-size:15px;line-height:1.7;color:#cfcabb;padding:0 0 22px;margin:0}
+</style>
+
+<div class="shield-lp">
+  <section class="shield-faq">
+    <div class="shield-faq__inner">
+      <div class="shield-faq__head">
+        <p class="shield-sec-eyebrow">Dudas frecuentes</p>
+        <h2 class="shield-sec-title">{{ section.settings.title }}</h2>
+      </div>
+      {%- for block in section.blocks -%}
+        <details class="shield-faq__item" {{ block.shopify_attributes }}>
+          <summary>{{ block.settings.q }}</summary>
+          <div class="shield-faq__a">{{ block.settings.a }}</div>
+        </details>
+      {%- endfor -%}
+    </div>
+  </section>
+</div>
+
+{% schema %}
+{
+  "name": "SHIELD · FAQ",
+  "tag": "section",
+  "max_blocks": 12,
+  "settings": [
+    { "type": "textarea", "id": "title", "label": "Titular", "default": "Preguntas frecuentes" }
+  ],
+  "blocks": [
+    { "type": "faq", "name": "Pregunta", "settings": [
+      { "type": "text", "id": "q", "label": "Pregunta" },
+      { "type": "richtext", "id": "a", "label": "Respuesta" }
+    ] }
+  ],
+  "presets": [{
+    "name": "SHIELD · FAQ",
+    "blocks": [
+      { "type": "faq", "settings": { "q": "¿Cómo se usa?", "a": "<p>En la ducha, como un jabón: aplicás sobre la piel húmeda de la zona afectada, dejás actuar un minuto y enjuagás. Todos los días.</p>" } },
+      { "type": "faq", "settings": { "q": "¿En cuánto tiempo se ven cambios?", "a": "<p>Cada piel es distinta. La clave es la constancia: usado a diario, muchos notan cambios en algunas semanas.</p>" } },
+      { "type": "faq", "settings": { "q": "¿Sirve para la espalda y el pecho?", "a": "<p>Sí. Está pensado para las zonas del cuerpo donde la piel suda y se roza, como espalda, pecho y hombros.</p>" } },
+      { "type": "faq", "settings": { "q": "¿Reseca la piel?", "a": "<p>Lleva ceramidas y ácido hialurónico para cuidar la barrera de la piel y ayudar a que no se reseque ni se irrite.</p>" } },
+      { "type": "faq", "settings": { "q": "¿Cómo es la garantía y el envío?", "a": "<p>Envío gratis a todo el país y 100 días de garantía: si no ves cambios, te devolvemos todo.</p>" } }
+    ]
+  }]
+}
+{% endschema %}

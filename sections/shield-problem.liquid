@@ -1,0 +1,44 @@
+{%- comment -%} SHIELD landing — Problema / empatía {%- endcomment -%}
+<style>
+  .shield-problem{background:#111113;color:var(--sh-bone);padding:72px 24px}
+  .shield-problem__inner{max-width:720px;margin:0 auto;text-align:center}
+  .shield-sec-eyebrow{font-family:var(--sh-font-mono);font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--sh-gold1);margin:0 0 16px}
+  .shield-sec-title{font-family:var(--sh-font-display);font-weight:700;text-transform:uppercase;line-height:1;font-size:clamp(30px,6vw,52px);margin:0 0 22px}
+  .shield-problem__body{font-size:clamp(16px,2.2vw,18px);line-height:1.7;color:#cfcabb;margin:0 auto 16px;max-width:600px}
+  .shield-problem__body strong{color:var(--sh-bone)}
+  .shield-rule{width:64px;height:2px;background:var(--sh-gold);border:0;margin:34px auto 0}
+</style>
+
+<div class="shield-lp">
+  <section class="shield-problem">
+    <div class="shield-problem__inner">
+      {%- if section.settings.eyebrow != blank -%}<p class="shield-sec-eyebrow">{{ section.settings.eyebrow }}</p>{%- endif -%}
+      <h2 class="shield-sec-title">{{ section.settings.title }}</h2>
+      {%- for block in section.blocks -%}
+        <p class="shield-problem__body" {{ block.shopify_attributes }}>{{ block.settings.text }}</p>
+      {%- endfor -%}
+      <hr class="shield-rule">
+    </div>
+  </section>
+</div>
+
+{% schema %}
+{
+  "name": "SHIELD · Problema",
+  "tag": "section",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Bajada", "default": "No es timidez" },
+    { "type": "textarea", "id": "title", "label": "Titular", "default": "El acné de la espalda hace que muchos se escondan" }
+  ],
+  "blocks": [
+    { "type": "parrafo", "name": "Párrafo", "settings": [ { "type": "richtext", "id": "text", "label": "Texto" } ] }
+  ],
+  "presets": [{
+    "name": "SHIELD · Problema",
+    "blocks": [
+      { "type": "parrafo", "settings": { "text": "<p>Se tapan con la remera incluso con calor. Evitan la playa, el pileteo, sacarse la ropa adelante de otros. De a poco, se van apagando.</p>" } },
+      { "type": "parrafo", "settings": { "text": "<p>Y <strong>no es culpa de nadie</strong>: el acné aparece donde la piel del cuerpo suda y se roza, y la mayoría de los jabones lo resecan o no limpian en profundidad.</p>" } }
+    ]
+  }]
+}
+{% endschema %}

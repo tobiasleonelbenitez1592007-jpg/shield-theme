@@ -1,0 +1,57 @@
+{%- comment -%} SHIELD landing — Testimonios (opinión personal) {%- endcomment -%}
+<style>
+  .shield-tst{background:var(--sh-black);color:var(--sh-bone);padding:80px 24px}
+  .shield-tst__inner{max-width:960px;margin:0 auto}
+  .shield-tst__head{text-align:center;margin:0 0 44px}
+  .shield-tst__grid{display:grid;grid-template-columns:1fr;gap:20px}
+  @media(min-width:760px){.shield-tst__grid{grid-template-columns:repeat(3,1fr)}}
+  .shield-tst__card{border:1px solid rgba(231,205,140,.18);border-radius:12px;padding:26px;background:linear-gradient(180deg,rgba(231,205,140,.04),rgba(231,205,140,0));text-align:left}
+  .shield-tst__stars{color:var(--sh-gold1);letter-spacing:3px;font-size:15px;margin:0 0 12px}
+  .shield-tst__quote{font-size:15px;line-height:1.65;color:#e7e2d4;margin:0 0 16px}
+  .shield-tst__name{font-family:var(--sh-font-mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--sh-gold1);margin:0}
+</style>
+
+<div class="shield-lp">
+  <section class="shield-tst">
+    <div class="shield-tst__inner">
+      <div class="shield-tst__head">
+        <p class="shield-sec-eyebrow">Lo que dicen</p>
+        <h2 class="shield-sec-title">{{ section.settings.title }}</h2>
+      </div>
+      <div class="shield-tst__grid">
+        {%- for block in section.blocks -%}
+          <div class="shield-tst__card" {{ block.shopify_attributes }}>
+            <p class="shield-tst__stars">★★★★★</p>
+            <p class="shield-tst__quote">“{{ block.settings.quote }}”</p>
+            <p class="shield-tst__name">— {{ block.settings.name }}</p>
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </section>
+</div>
+
+{% schema %}
+{
+  "name": "SHIELD · Testimonios",
+  "tag": "section",
+  "max_blocks": 9,
+  "settings": [
+    { "type": "textarea", "id": "title", "label": "Titular", "default": "Volvieron a sentirse cómodos en su piel" }
+  ],
+  "blocks": [
+    { "type": "testimonio", "name": "Testimonio", "settings": [
+      { "type": "textarea", "id": "quote", "label": "Texto" },
+      { "type": "text", "id": "name", "label": "Nombre" }
+    ] }
+  ],
+  "presets": [{
+    "name": "SHIELD · Testimonios",
+    "blocks": [
+      { "type": "testimonio", "settings": { "quote": "Había probado de todo y nada me duraba. A las semanas la espalda me cambió un montón y volví a la playa sin remera.", "name": "Lucas, 24" } },
+      { "type": "testimonio", "settings": { "quote": "Se lo compré a mi hijo. Lo usa en la ducha solo, sin que le insista, y se lo nota más seguro.", "name": "Carla, mamá de Tomás" } },
+      { "type": "testimonio", "settings": { "quote": "Simple de usar y no me reseca la piel como otros jabones. Lo recomiendo.", "name": "Martín, 29" } }
+    ]
+  }]
+}
+{% endschema %}
