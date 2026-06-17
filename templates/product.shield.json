@@ -299,6 +299,17 @@
         "desktop_padding_bottom": 0
       }
     },
+    "shield_before_after": {
+      "type": "shield-before-after",
+      "settings": {
+        "eyebrow": "Resultados con el uso",
+        "title": "Deslizá para ver el antes y después",
+        "before_label": "Antes",
+        "after_label": "Después",
+        "ratio": "4 / 5",
+        "caption": "Deslizá la línea para comparar. Imágenes ilustrativas."
+      }
+    },
     "wd_section_divider_7abG8W": {
       "type": "wd-section-divider",
       "name": "t:sections.section-divider.name",
@@ -845,6 +856,7 @@
   "order": [
     "related-products",
     "main",
+    "shield_before_after",
     "wd_section_divider_7abG8W",
     "rich_text_VHifmL",
     "image_with_text_6NJQ98",
