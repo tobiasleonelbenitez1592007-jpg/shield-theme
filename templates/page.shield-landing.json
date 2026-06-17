@@ -10,6 +10,7 @@
         "badge_num": "50%",
         "badge_text": "OFF + envío gratis esta semana",
         "cta_label": "Quiero el mío",
+        "cta_link": "/products/shield-gel-antiacne-corporal",
         "trust_text": "100 días de garantía · Envío gratis a todo el país"
       }
     },
@@ -71,6 +72,7 @@
         "big_num_small": "% OFF",
         "title": "Empezá hoy tu rutina SHIELD",
         "cta_label": "Quiero el mío con 50% OFF",
+        "cta_link": "/products/shield-gel-antiacne-corporal",
         "guarantee": "100 días de garantía: si no ves cambios, te devolvemos todo. Sin vueltas."
       }
     },
