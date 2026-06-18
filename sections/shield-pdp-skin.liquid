@@ -1,10 +1,10 @@
-{%- comment -%} SHIELD — Re-skin de la PDP al estilo advertorial (blanco + gama dorada + negro). No cambia contenido, solo apariencia. {%- endcomment -%}
+{%- comment -%} SHIELD — Re-skin de la PDP: tipografias + boton + esquemas alternados (blanco / dorado claro / dorado oscuro) de la info de producto para abajo. No cambia contenido. {%- endcomment -%}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;900&family=Italiana&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
-  /* === Paleta: blanco + gama dorada en todos los esquemas dentro del producto === */
+  /* === Base: zona de info de producto en blanco === */
   #MainContent [class*="color-scheme-"],
   #MainContent [class*="color-background-"],
   #MainContent .gradient {
@@ -23,7 +23,7 @@
   }
   #MainContent { background:#fff; font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
 
-  /* === Encabezados en gama dorada (reemplaza el amarillo) === */
+  /* === Tipografia de encabezados (color por defecto: dorado; se sobreescribe por seccion) === */
   #MainContent h1, #MainContent h2, #MainContent h3,
   #MainContent .h0, #MainContent .h1, #MainContent .h2, #MainContent .h3,
   #MainContent .title, #MainContent .product__title, #MainContent .rich-text__heading {
@@ -32,87 +32,79 @@
     background:linear-gradient(135deg,#C9A24A 0%,#8A6722 100%);
     -webkit-background-clip:text; background-clip:text; color:transparent;
   }
-  /* El título del producto va en negro (no dorado) */
-  #MainContent .product__title, #MainContent .product__title * {
-    background:none !important;
-    -webkit-background-clip:border-box !important; background-clip:border-box !important;
-    -webkit-text-fill-color:#0B0B0C !important; color:#0B0B0C !important;
-  }
-
-  /* Detalle: filete dorado bajo los títulos de sección */
   #MainContent .rich-text__heading { padding-bottom:6px; }
   #MainContent .rich-text__heading::after {
     content:""; display:block; width:56px; height:3px; margin:14px auto 0;
     background:linear-gradient(135deg,#E3C879,#9A7327); border-radius:2px;
   }
+  /* Titulo del producto en negro */
+  #MainContent .product__title, #MainContent .product__title * {
+    background:none !important; -webkit-text-fill-color:#0B0B0C !important; color:#0B0B0C !important;
+  }
 
-  /* === Botón de compra: TODO dorado, sin bordes === */
+  /* === Boton de compra: todo dorado, sin bordes === */
   #MainContent .button:not(.button--secondary):not(.button--tertiary),
   #MainContent .product-form__submit,
   #MainContent .shopify-payment-button__button--unbranded,
   #MainContent .cart__checkout-button {
     background:linear-gradient(135deg,#E3C268 0%,#B8893C 45%,#9A7327 100%) !important;
-    color:#1a1408 !important;
-    border:0 !important; box-shadow:none !important;
+    color:#1a1408 !important; border:0 !important; box-shadow:none !important;
     font-family:"Big Shoulders Display",Impact,sans-serif; text-transform:uppercase; letter-spacing:.06em; font-weight:700;
   }
-  /* Matar el borde pseudo-elemento que Dawn dibuja en los botones */
   #MainContent .button::after, #MainContent .button::before,
   #MainContent .product-form__submit::after,
   #MainContent .shopify-payment-button__button--unbranded::after,
-  #MainContent .cart__checkout-button::after {
-    display:none !important; box-shadow:none !important; border:0 !important;
-  }
-  /* Botones secundarios: contorno dorado fino */
+  #MainContent .cart__checkout-button::after { display:none !important; box-shadow:none !important; border:0 !important; }
   #MainContent .button--secondary {
-    background:transparent !important; color:#8A6722 !important;
-    box-shadow:0 0 0 1px #B8893C inset !important;
+    background:transparent !important; color:#8A6722 !important; box-shadow:0 0 0 1px #B8893C inset !important;
     font-family:"Big Shoulders Display",Impact,sans-serif; text-transform:uppercase; letter-spacing:.06em;
   }
   #MainContent .button--secondary::after { display:none !important; }
 
-  /* === Detalles dorados extra === */
-  #MainContent .rating-star { color:#B8893C; }
-  #MainContent .rte a, #MainContent a.link { color:#8A6722; }
-  #MainContent .price { color:#0B0B0C; }
-  /* Bordes dorados suaves en acordeones / contenido colapsable */
-  #MainContent .accordion, #MainContent .product__accordion,
-  #MainContent .collapsible-content details, #MainContent .accordion details {
-    border-color:rgba(154,115,39,.28) !important;
-  }
-  /* Etiquetas chicas en mono dorado */
-  #MainContent .caption, #MainContent .caption-large {
-    font-family:"Space Mono","Courier New",monospace; letter-spacing:.05em; color:#8A6722;
-  }
-
-  /* === Filas desplegables (acordeones) en negro === */
+  /* Filas desplegables (acordeones) en negro (zona blanca) */
   #MainContent .collapsible-content summary, #MainContent .accordion summary,
   #MainContent .product__accordion summary, #MainContent .accordion__title,
   #MainContent summary .h4, #MainContent summary > * {
     background:none !important; -webkit-text-fill-color:#0B0B0C !important; color:#0B0B0C !important;
   }
+  #MainContent .rating-star { color:#B8893C; }
+  #MainContent .caption, #MainContent .caption-large { font-family:"Space Mono","Courier New",monospace; letter-spacing:.05em; color:#8A6722; }
 
-  /* === Zona dorada: del fin de la info de producto hasta el footer (degradé continuo) === */
-  #shopify-section-rich_text_VHifmL{background:linear-gradient(180deg,#EBCE82,#E1C06C)!important}
-  #shopify-section-image_with_text_6NJQ98{background:linear-gradient(180deg,#E1C06C,#D7B257)!important}
-  #shopify-section-image_with_text_8wqzxh{background:linear-gradient(180deg,#D7B257,#CDA445)!important}
-  #shopify-section-rich_text_d7MAiq{background:linear-gradient(180deg,#CDA445,#C39637)!important}
-  #shopify-section-results_bTnYR4{background:linear-gradient(180deg,#C39637,#B98A2E)!important}
-  #shopify-section-ds_testimonials_RaQjhC{background:linear-gradient(180deg,#B98A2E,#AF7E28)!important}
-  #shopify-section-rich_text_rxajnn{background:linear-gradient(180deg,#AF7E28,#A57323)!important}
-  #shopify-section-collapsible_content_ea4B3M{background:linear-gradient(180deg,#A57323,#97691F)!important}
-  #shopify-section-ds_icon_bar_jE6Bhj{background:linear-gradient(180deg,#97691F,#8A6722)!important}
+  /* ===================================================================== */
+  /* === ESQUEMAS ALTERNADOS: de Antes/Despues para abajo === */
+  /* D = dorado oscuro | L = dorado claro | W = blanco */
 
-  /* Interiores transparentes para que el degradé fluya continuo */
-  :is([id^="shopify-section-rich_text_"],[id^="shopify-section-image_with_text_"],#shopify-section-results_bTnYR4,#shopify-section-ds_testimonials_RaQjhC,#shopify-section-collapsible_content_ea4B3M,#shopify-section-ds_icon_bar_jE6Bhj) :is(.gradient,[class*="color-scheme-"],[class*="color-background-"]){
+  /* Bandas de fondo */
+  :is(#shopify-section-rich_text_VHifmL,#shopify-section-rich_text_d7MAiq,#shopify-section-rich_text_rxajnn,#shopify-section-ds_icon_bar_jE6Bhj){ background:#9A7327 !important; }
+  :is(#shopify-section-shield_before_after,#shopify-section-image_with_text_8wqzxh,#shopify-section-ds_testimonials_RaQjhC){ background:#EAD9A0 !important; }
+  :is(#shopify-section-image_with_text_6NJQ98,#shopify-section-results_bTnYR4,#shopify-section-collapsible_content_ea4B3M){ background:#ffffff !important; }
+
+  /* Interiores transparentes para que se vea la banda */
+  :is(#shopify-section-rich_text_VHifmL,#shopify-section-rich_text_d7MAiq,#shopify-section-rich_text_rxajnn,#shopify-section-ds_icon_bar_jE6Bhj,#shopify-section-shield_before_after,#shopify-section-image_with_text_8wqzxh,#shopify-section-ds_testimonials_RaQjhC,#shopify-section-image_with_text_6NJQ98,#shopify-section-results_bTnYR4,#shopify-section-collapsible_content_ea4B3M) :is(.gradient,[class*="color-scheme-"],[class*="color-background-"]){
     background:transparent !important; --gradient-background:transparent !important;
   }
 
-  /* Texto y encabezados en negro dentro de la zona dorada */
-  :is([id^="shopify-section-rich_text_"],[id^="shopify-section-image_with_text_"],#shopify-section-results_bTnYR4,#shopify-section-ds_testimonials_RaQjhC,#shopify-section-collapsible_content_ea4B3M,#shopify-section-ds_icon_bar_jE6Bhj) :is(p,li,span,a,strong,em,.rte,td,th){ color:#0B0B0C !important; }
-  :is([id^="shopify-section-rich_text_"],[id^="shopify-section-image_with_text_"],#shopify-section-results_bTnYR4,#shopify-section-ds_testimonials_RaQjhC,#shopify-section-collapsible_content_ea4B3M,#shopify-section-ds_icon_bar_jE6Bhj) :is(h1,h2,h3,.h0,.h1,.h2,.h3,.title,.rich-text__heading){ background:none !important; -webkit-text-fill-color:#0B0B0C !important; color:#0B0B0C !important; }
-  :is([id^="shopify-section-rich_text_"],[id^="shopify-section-image_with_text_"],#shopify-section-results_bTnYR4,#shopify-section-ds_testimonials_RaQjhC,#shopify-section-collapsible_content_ea4B3M,#shopify-section-ds_icon_bar_jE6Bhj) .rich-text__heading::after{ background:#0B0B0C !important; }
-  :is([id^="shopify-section-rich_text_"],[id^="shopify-section-image_with_text_"],#shopify-section-results_bTnYR4,#shopify-section-ds_testimonials_RaQjhC,#shopify-section-collapsible_content_ea4B3M,#shopify-section-ds_icon_bar_jE6Bhj) :is(.rating-star,svg,.icon){ color:#0B0B0C !important; }
+  /* DARK: texto y encabezados en crema */
+  :is(#shopify-section-rich_text_VHifmL,#shopify-section-rich_text_d7MAiq,#shopify-section-rich_text_rxajnn,#shopify-section-ds_icon_bar_jE6Bhj) :is(p,li,span,a,strong,em,.rte,td,th,.caption,.caption-large){ color:#F4F1EA !important; }
+  :is(#shopify-section-rich_text_VHifmL,#shopify-section-rich_text_d7MAiq,#shopify-section-rich_text_rxajnn,#shopify-section-ds_icon_bar_jE6Bhj) :is(h1,h2,h3,.h0,.h1,.h2,.h3,.title,.rich-text__heading){ background:none !important; -webkit-text-fill-color:#F4F1EA !important; color:#F4F1EA !important; }
+  :is(#shopify-section-rich_text_VHifmL,#shopify-section-rich_text_d7MAiq,#shopify-section-rich_text_rxajnn,#shopify-section-ds_icon_bar_jE6Bhj) .rich-text__heading::after{ background:#F4F1EA !important; }
+  :is(#shopify-section-rich_text_VHifmL,#shopify-section-rich_text_d7MAiq,#shopify-section-rich_text_rxajnn,#shopify-section-ds_icon_bar_jE6Bhj) :is(.rating-star,svg,.icon){ color:#F4F1EA !important; }
+
+  /* LIGHT: texto y encabezados en negro, iconos dorado oscuro */
+  :is(#shopify-section-shield_before_after,#shopify-section-image_with_text_8wqzxh,#shopify-section-ds_testimonials_RaQjhC) :is(p,li,span,a,strong,em,.rte,td,th,.caption,.caption-large){ color:#0B0B0C !important; }
+  :is(#shopify-section-shield_before_after,#shopify-section-image_with_text_8wqzxh,#shopify-section-ds_testimonials_RaQjhC) :is(h1,h2,h3,.h0,.h1,.h2,.h3,.title,.rich-text__heading){ background:none !important; -webkit-text-fill-color:#0B0B0C !important; color:#0B0B0C !important; }
+  :is(#shopify-section-shield_before_after,#shopify-section-image_with_text_8wqzxh,#shopify-section-ds_testimonials_RaQjhC) .rich-text__heading::after{ background:#9A7327 !important; }
+  :is(#shopify-section-shield_before_after,#shopify-section-image_with_text_8wqzxh,#shopify-section-ds_testimonials_RaQjhC) :is(.rating-star){ color:#9A7327 !important; }
+
+  /* WHITE: texto negro (encabezados quedan dorados por el estilo global) */
+  :is(#shopify-section-image_with_text_6NJQ98,#shopify-section-results_bTnYR4,#shopify-section-collapsible_content_ea4B3M) :is(p,li,span,.rte,td,th){ color:#0B0B0C !important; }
+
+  /* Antes/Despues: titulo, bajada y aclaracion en negro sobre banda clara */
+  #shopify-section-shield_before_after :is(.shield-ba__title,.shield-ba__eyebrow,.shield-ba__caption){ background:none !important; -webkit-text-fill-color:#0B0B0C !important; color:#0B0B0C !important; }
+
+  /* CONTENEDOR: cajas de los banners de imagen con tono contrastante */
+  #shopify-section-image_with_text_6NJQ98 .image-with-text__content{ background:#F8F1DF !important; border-radius:12px; }
+  #shopify-section-image_with_text_8wqzxh .image-with-text__content{ background:#ffffff !important; border-radius:12px; }
 </style>
 
 {% schema %}
@@ -120,7 +112,7 @@
   "name": "SHIELD · Estilo PDP",
   "tag": "section",
   "settings": [
-    { "type": "paragraph", "content": "Aplica la estética de la advertorial (blanco + gama dorada + negro) a esta página de producto sin cambiar el contenido. Mantené esta sección al inicio del producto." }
+    { "type": "paragraph", "content": "Aplica tipografias, boton dorado y esquemas de color alternados (blanco / dorado claro / dorado oscuro) a la pagina de producto sin cambiar el contenido. Mantener al inicio del producto." }
   ],
   "presets": [{ "name": "SHIELD · Estilo PDP" }]
 }
