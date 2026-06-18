@@ -9,16 +9,20 @@
  */
 {
   "current": {
-    "logo": "shopify://shop_images/ChatGPT_Image_8_jun_2026_07_29_11_p.m..png",
+    "logo": "shopify://shop_images/ChatGPT_Image_17_jun_2026_08_15_31_p.m..png",
     "logo_width": 100,
+    "favicon": "shopify://shop_images/ChatGPT_Image_17_jun_2026_08_21_11_p.m..png",
     "colors_solid_button_labels": "#000000",
-    "colors_accent_1": "#8b857e",
+    "colors_accent_1": "#B39453",
+    "gradient_accent_1": "linear-gradient(275deg, rgba(179, 148, 83, 1) 14%, rgba(211, 185, 118, 1) 83%)",
     "colors_accent_2": "#000000",
+    "gradient_accent_2": "",
     "colors_text": "#000000",
     "colors_outline_button_labels": "#000000",
     "colors_background_1": "#f7f5e9",
     "gradient_background_1": "",
-    "colors_background_2": "#8b857e",
+    "colors_background_2": "#B39453",
+    "gradient_background_2": "linear-gradient(96deg, rgba(210, 183, 116, 1) 9%, rgba(170, 135, 77, 1) 54%, rgba(179, 148, 83, 1) 100%)",
     "type_header_font": "poppins_n7",
     "heading_scale": 100,
     "type_body_font": "poppins_n4",
@@ -282,7 +286,7 @@
       },
       "scheme-541ad50d-cdb8-4e5f-854e-6955f6b5103a": {
         "settings": {
-          "background": "#d4d4cc",
+          "background": "#e3ba53",
           "background_gradient": "",
           "text": "#121212",
           "button": "#121212",
@@ -293,7 +297,7 @@
       },
       "scheme-8b459eb5-1b6a-48e6-baa3-637cdab6bfd1": {
         "settings": {
-          "background": "#8b857e",
+          "background": "#AA9363",
           "background_gradient": "",
           "text": "#000000",
           "button": "#121212",

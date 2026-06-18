@@ -316,12 +316,11 @@
     },
     "wd_section_divider_7abG8W": {
       "type": "wd-section-divider",
-      "disabled": true,
       "name": "t:sections.section-divider.name",
       "settings": {
         "divider_shape": "wavy",
         "divider_color_top": "#ffffff",
-        "divider_color_bottom": "#B8893C",
+        "divider_color_bottom": "#FCFCFC",
         "padding_top_desktop": 40,
         "padding_bottom_desktop": 28,
         "padding_top_mobile": 40,
@@ -357,11 +356,11 @@
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
-        "color_scheme": "accent-1",
+        "color_scheme": "custom",
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 52,
-        "custom_colors_background": "#ffffff",
+        "custom_colors_background": "#FFFFFF",
         "custom_gradient_background": "",
         "custom_colors_text": "#2e2a39",
         "custom_colors_solid_button_background": "#dd1d1d",
@@ -409,12 +408,11 @@
     },
     "wd_section_divider_rc4VJR": {
       "type": "wd-section-divider",
-      "disabled": true,
       "name": "t:sections.section-divider.name",
       "settings": {
         "divider_shape": "wavy",
-        "divider_color_top": "#B8893C",
-        "divider_color_bottom": "#E3C879",
+        "divider_color_top": "#b8893c",
+        "divider_color_bottom": "#e3c879",
         "padding_top_desktop": 40,
         "padding_bottom_desktop": 40,
         "padding_top_mobile": 40,
@@ -449,7 +447,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/ChatGPT_Image_9_jun_2026_01_36_55_a.m..png",
+        "image": "shopify://shop_images/ChatGPT_Image_17_jun_2026_08_48_14_p.m..png",
         "height": "adapt",
         "desktop_image_width": "small",
         "layout": "image_first",
@@ -466,12 +464,11 @@
     },
     "wd_section_divider_JjL4rF": {
       "type": "wd-section-divider",
-      "disabled": true,
       "name": "t:sections.section-divider.name",
       "settings": {
         "divider_shape": "wavy",
-        "divider_color_top": "#E3C879",
-        "divider_color_bottom": "#B8893C",
+        "divider_color_top": "#e3c879",
+        "divider_color_bottom": "#b8893c",
         "padding_top_desktop": 40,
         "padding_bottom_desktop": 40,
         "padding_top_mobile": 40,
@@ -520,11 +517,10 @@
     },
     "wd_section_divider_NXErbg": {
       "type": "wd-section-divider",
-      "disabled": true,
       "name": "t:sections.section-divider.name",
       "settings": {
         "divider_shape": "wavy",
-        "divider_color_top": "#B8893C",
+        "divider_color_top": "#b8893c",
         "divider_color_bottom": "#ffffff",
         "padding_top_desktop": 40,
         "padding_bottom_desktop": 28,
@@ -584,7 +580,7 @@
         "custom_colors_background": "#ffffff",
         "custom_gradient_background": "",
         "custom_colors_text": "#000000",
-        "custom_colors_accent": "#B8893C",
+        "custom_colors_accent": "#b8893c",
         "custom_colors_solid_button_background": "#000000",
         "custom_colors_solid_button_text": "#dd1d1d",
         "custom_colors_outline_button": "#dd1d1d"
@@ -850,7 +846,7 @@
       "settings": {
         "divider_shape": "wavy",
         "divider_color_top": "#ffffff",
-        "divider_color_bottom": "#B8893C",
+        "divider_color_bottom": "#b8893c",
         "padding_top_desktop": 40,
         "padding_bottom_desktop": 40,
         "padding_top_mobile": 40,

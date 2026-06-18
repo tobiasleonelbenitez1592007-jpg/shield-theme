@@ -1,110 +1,89 @@
-{%- comment -%} SHIELD — Re-skin de la PDP: tipografias + boton + esquemas alternados (blanco / dorado claro / dorado oscuro) de la info de producto para abajo. No cambia contenido. {%- endcomment -%}
+{%- comment -%} SHIELD — Re-skin PDP. Colores editables desde el editor. No cambia contenido. {%- endcomment -%}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;900&family=Italiana&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 
+{%- assign cDark = section.settings.band_dark -%}
+{%- assign cLight = section.settings.band_light -%}
+{%- assign cWhite = section.settings.band_white -%}
+{%- assign tDark = section.settings.text_on_dark -%}
+{%- assign tLight = section.settings.text_on_light -%}
+{%- assign hg1 = section.settings.heading_gold_1 -%}
+{%- assign hg2 = section.settings.heading_gold_2 -%}
+{%- assign b1 = section.settings.button_1 -%}
+{%- assign b2 = section.settings.button_2 -%}
+{%- assign b3 = section.settings.button_3 -%}
+{%- assign cont1 = section.settings.container_white -%}
+{%- assign cont2 = section.settings.container_light -%}
+
 <style>
   /* === Base: zona de info de producto en blanco === */
-  #MainContent [class*="color-scheme-"],
-  #MainContent [class*="color-background-"],
-  #MainContent .gradient {
-    --color-background: 255,255,255;
-    --gradient-background: #ffffff;
-    --color-foreground: 11,11,12;
-    --color-button: 154,115,39;
-    --color-button-text: 26,20,8;
-    --color-secondary-button-label: 138,103,34;
-    --color-link: 138,103,34;
-    --color-base-accent-1: 154,115,39;
-    --color-base-accent-2: 124,94,32;
-    --color-icon: 154,115,39;
-    --color-base-background-1: 255,255,255;
-    --color-base-background-2: 250,248,240;
+  #MainContent [class*="color-scheme-"], #MainContent [class*="color-background-"], #MainContent .gradient {
+    --color-background: 255,255,255; --gradient-background: #ffffff; --color-foreground: 11,11,12;
+    --color-button: 154,115,39; --color-button-text: 26,20,8; --color-secondary-button-label: 138,103,34;
+    --color-link: 138,103,34; --color-base-accent-1: 154,115,39; --color-base-accent-2: 124,94,32; --color-icon: 154,115,39;
+    --color-base-background-1: 255,255,255; --color-base-background-2: 250,248,240;
   }
   #MainContent { background:#fff; font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
 
-  /* === Tipografia de encabezados (color por defecto: dorado; se sobreescribe por seccion) === */
-  #MainContent h1, #MainContent h2, #MainContent h3,
-  #MainContent .h0, #MainContent .h1, #MainContent .h2, #MainContent .h3,
+  /* === Encabezados (dorado por defecto; se sobreescribe por seccion) === */
+  #MainContent h1, #MainContent h2, #MainContent h3, #MainContent .h0, #MainContent .h1, #MainContent .h2, #MainContent .h3,
   #MainContent .title, #MainContent .product__title, #MainContent .rich-text__heading {
-    font-family:"Big Shoulders Display",Impact,sans-serif !important;
-    text-transform:uppercase; letter-spacing:.01em; font-weight:700;
-    background:linear-gradient(135deg,#C9A24A 0%,#8A6722 100%);
-    -webkit-background-clip:text; background-clip:text; color:transparent;
+    font-family:"Big Shoulders Display",Impact,sans-serif !important; text-transform:uppercase; letter-spacing:.01em; font-weight:700;
+    background:linear-gradient(135deg,{{ hg1 }} 0%,{{ hg2 }} 100%); -webkit-background-clip:text; background-clip:text; color:transparent;
   }
   #MainContent .rich-text__heading { padding-bottom:6px; }
-  #MainContent .rich-text__heading::after {
-    content:""; display:block; width:56px; height:3px; margin:14px auto 0;
-    background:linear-gradient(135deg,#E3C879,#9A7327); border-radius:2px;
-  }
-  /* Titulo del producto en negro */
-  #MainContent .product__title, #MainContent .product__title * {
-    background:none !important; -webkit-text-fill-color:#0B0B0C !important; color:#0B0B0C !important;
-  }
+  #MainContent .rich-text__heading::after { content:""; display:block; width:56px; height:3px; margin:14px auto 0; background:linear-gradient(135deg,{{ hg1 }},{{ hg2 }}); border-radius:2px; }
+  #MainContent .product__title, #MainContent .product__title * { background:none !important; -webkit-text-fill-color:#0B0B0C !important; color:#0B0B0C !important; }
 
   /* === Boton de compra: todo dorado, sin bordes === */
-  #MainContent .button:not(.button--secondary):not(.button--tertiary),
-  #MainContent .product-form__submit,
-  #MainContent .shopify-payment-button__button--unbranded,
-  #MainContent .cart__checkout-button {
-    background:linear-gradient(135deg,#E3C268 0%,#B8893C 45%,#9A7327 100%) !important;
-    color:#1a1408 !important; border:0 !important; box-shadow:none !important;
+  #MainContent .button:not(.button--secondary):not(.button--tertiary), #MainContent .product-form__submit,
+  #MainContent .shopify-payment-button__button--unbranded, #MainContent .cart__checkout-button {
+    background:linear-gradient(135deg,{{ b1 }} 0%,{{ b2 }} 45%,{{ b3 }} 100%) !important; color:#1a1408 !important; border:0 !important; box-shadow:none !important;
     font-family:"Big Shoulders Display",Impact,sans-serif; text-transform:uppercase; letter-spacing:.06em; font-weight:700;
   }
-  #MainContent .button::after, #MainContent .button::before,
-  #MainContent .product-form__submit::after,
-  #MainContent .shopify-payment-button__button--unbranded::after,
-  #MainContent .cart__checkout-button::after { display:none !important; box-shadow:none !important; border:0 !important; }
-  #MainContent .button--secondary {
-    background:transparent !important; color:#8A6722 !important; box-shadow:0 0 0 1px #B8893C inset !important;
-    font-family:"Big Shoulders Display",Impact,sans-serif; text-transform:uppercase; letter-spacing:.06em;
-  }
+  #MainContent .button::after, #MainContent .button::before, #MainContent .product-form__submit::after,
+  #MainContent .shopify-payment-button__button--unbranded::after, #MainContent .cart__checkout-button::after { display:none !important; box-shadow:none !important; border:0 !important; }
+  #MainContent .button--secondary { background:transparent !important; color:{{ hg2 }} !important; box-shadow:0 0 0 1px {{ b2 }} inset !important;
+    font-family:"Big Shoulders Display",Impact,sans-serif; text-transform:uppercase; letter-spacing:.06em; }
   #MainContent .button--secondary::after { display:none !important; }
 
-  /* Filas desplegables (acordeones) en negro (zona blanca) */
-  #MainContent .collapsible-content summary, #MainContent .accordion summary,
-  #MainContent .product__accordion summary, #MainContent .accordion__title,
-  #MainContent summary .h4, #MainContent summary > * {
-    background:none !important; -webkit-text-fill-color:#0B0B0C !important; color:#0B0B0C !important;
-  }
-  #MainContent .rating-star { color:#B8893C; }
-  #MainContent .caption, #MainContent .caption-large { font-family:"Space Mono","Courier New",monospace; letter-spacing:.05em; color:#8A6722; }
+  /* Filas desplegables en negro + detalles */
+  #MainContent .collapsible-content summary, #MainContent .accordion summary, #MainContent .product__accordion summary,
+  #MainContent .accordion__title, #MainContent summary .h4, #MainContent summary > * { background:none !important; -webkit-text-fill-color:#0B0B0C !important; color:#0B0B0C !important; }
+  #MainContent .rating-star { color:{{ b2 }}; }
+  #MainContent .caption, #MainContent .caption-large { font-family:"Space Mono","Courier New",monospace; letter-spacing:.05em; color:{{ hg2 }}; }
 
-  /* ===================================================================== */
-  /* === ESQUEMAS ALTERNADOS: de Antes/Despues para abajo === */
-  /* D = dorado oscuro | L = dorado claro | W = blanco */
+  /* === ESQUEMAS ALTERNADOS (de Antes/Despues para abajo) === */
+  /* Bandas */
+  :is(#shopify-section-rich_text_VHifmL,#shopify-section-rich_text_d7MAiq,#shopify-section-rich_text_rxajnn,#shopify-section-ds_icon_bar_jE6Bhj){ background:{{ cDark }} !important; }
+  :is(#shopify-section-shield_before_after,#shopify-section-image_with_text_8wqzxh,#shopify-section-ds_testimonials_RaQjhC){ background:{{ cLight }} !important; }
+  :is(#shopify-section-image_with_text_6NJQ98,#shopify-section-results_bTnYR4,#shopify-section-collapsible_content_ea4B3M){ background:{{ cWhite }} !important; }
 
-  /* Bandas de fondo */
-  :is(#shopify-section-rich_text_VHifmL,#shopify-section-rich_text_d7MAiq,#shopify-section-rich_text_rxajnn,#shopify-section-ds_icon_bar_jE6Bhj){ background:#9A7327 !important; }
-  :is(#shopify-section-shield_before_after,#shopify-section-image_with_text_8wqzxh,#shopify-section-ds_testimonials_RaQjhC){ background:#EAD9A0 !important; }
-  :is(#shopify-section-image_with_text_6NJQ98,#shopify-section-results_bTnYR4,#shopify-section-collapsible_content_ea4B3M){ background:#ffffff !important; }
+  /* Interiores transparentes */
+  :is(#shopify-section-rich_text_VHifmL,#shopify-section-rich_text_d7MAiq,#shopify-section-rich_text_rxajnn,#shopify-section-ds_icon_bar_jE6Bhj,#shopify-section-shield_before_after,#shopify-section-image_with_text_8wqzxh,#shopify-section-ds_testimonials_RaQjhC,#shopify-section-image_with_text_6NJQ98,#shopify-section-results_bTnYR4,#shopify-section-collapsible_content_ea4B3M) :is(.gradient,[class*="color-scheme-"],[class*="color-background-"]){ background:transparent !important; --gradient-background:transparent !important; }
 
-  /* Interiores transparentes para que se vea la banda */
-  :is(#shopify-section-rich_text_VHifmL,#shopify-section-rich_text_d7MAiq,#shopify-section-rich_text_rxajnn,#shopify-section-ds_icon_bar_jE6Bhj,#shopify-section-shield_before_after,#shopify-section-image_with_text_8wqzxh,#shopify-section-ds_testimonials_RaQjhC,#shopify-section-image_with_text_6NJQ98,#shopify-section-results_bTnYR4,#shopify-section-collapsible_content_ea4B3M) :is(.gradient,[class*="color-scheme-"],[class*="color-background-"]){
-    background:transparent !important; --gradient-background:transparent !important;
-  }
+  /* DARK: crema */
+  :is(#shopify-section-rich_text_VHifmL,#shopify-section-rich_text_d7MAiq,#shopify-section-rich_text_rxajnn,#shopify-section-ds_icon_bar_jE6Bhj) :is(p,li,span,a,strong,em,.rte,td,th,.caption,.caption-large){ color:{{ tDark }} !important; }
+  :is(#shopify-section-rich_text_VHifmL,#shopify-section-rich_text_d7MAiq,#shopify-section-rich_text_rxajnn,#shopify-section-ds_icon_bar_jE6Bhj) :is(h1,h2,h3,.h0,.h1,.h2,.h3,.title,.rich-text__heading){ background:none !important; -webkit-text-fill-color:{{ tDark }} !important; color:{{ tDark }} !important; }
+  :is(#shopify-section-rich_text_VHifmL,#shopify-section-rich_text_d7MAiq,#shopify-section-rich_text_rxajnn,#shopify-section-ds_icon_bar_jE6Bhj) .rich-text__heading::after{ background:{{ tDark }} !important; }
+  :is(#shopify-section-rich_text_VHifmL,#shopify-section-rich_text_d7MAiq,#shopify-section-rich_text_rxajnn,#shopify-section-ds_icon_bar_jE6Bhj) :is(.rating-star,svg,.icon){ color:{{ tDark }} !important; }
 
-  /* DARK: texto y encabezados en crema */
-  :is(#shopify-section-rich_text_VHifmL,#shopify-section-rich_text_d7MAiq,#shopify-section-rich_text_rxajnn,#shopify-section-ds_icon_bar_jE6Bhj) :is(p,li,span,a,strong,em,.rte,td,th,.caption,.caption-large){ color:#F4F1EA !important; }
-  :is(#shopify-section-rich_text_VHifmL,#shopify-section-rich_text_d7MAiq,#shopify-section-rich_text_rxajnn,#shopify-section-ds_icon_bar_jE6Bhj) :is(h1,h2,h3,.h0,.h1,.h2,.h3,.title,.rich-text__heading){ background:none !important; -webkit-text-fill-color:#F4F1EA !important; color:#F4F1EA !important; }
-  :is(#shopify-section-rich_text_VHifmL,#shopify-section-rich_text_d7MAiq,#shopify-section-rich_text_rxajnn,#shopify-section-ds_icon_bar_jE6Bhj) .rich-text__heading::after{ background:#F4F1EA !important; }
-  :is(#shopify-section-rich_text_VHifmL,#shopify-section-rich_text_d7MAiq,#shopify-section-rich_text_rxajnn,#shopify-section-ds_icon_bar_jE6Bhj) :is(.rating-star,svg,.icon){ color:#F4F1EA !important; }
+  /* LIGHT: negro */
+  :is(#shopify-section-shield_before_after,#shopify-section-image_with_text_8wqzxh,#shopify-section-ds_testimonials_RaQjhC) :is(p,li,span,a,strong,em,.rte,td,th,.caption,.caption-large){ color:{{ tLight }} !important; }
+  :is(#shopify-section-shield_before_after,#shopify-section-image_with_text_8wqzxh,#shopify-section-ds_testimonials_RaQjhC) :is(h1,h2,h3,.h0,.h1,.h2,.h3,.title,.rich-text__heading){ background:none !important; -webkit-text-fill-color:{{ tLight }} !important; color:{{ tLight }} !important; }
+  :is(#shopify-section-shield_before_after,#shopify-section-image_with_text_8wqzxh,#shopify-section-ds_testimonials_RaQjhC) .rich-text__heading::after{ background:{{ cDark }} !important; }
+  :is(#shopify-section-shield_before_after,#shopify-section-image_with_text_8wqzxh,#shopify-section-ds_testimonials_RaQjhC) :is(.rating-star){ color:{{ cDark }} !important; }
 
-  /* LIGHT: texto y encabezados en negro, iconos dorado oscuro */
-  :is(#shopify-section-shield_before_after,#shopify-section-image_with_text_8wqzxh,#shopify-section-ds_testimonials_RaQjhC) :is(p,li,span,a,strong,em,.rte,td,th,.caption,.caption-large){ color:#0B0B0C !important; }
-  :is(#shopify-section-shield_before_after,#shopify-section-image_with_text_8wqzxh,#shopify-section-ds_testimonials_RaQjhC) :is(h1,h2,h3,.h0,.h1,.h2,.h3,.title,.rich-text__heading){ background:none !important; -webkit-text-fill-color:#0B0B0C !important; color:#0B0B0C !important; }
-  :is(#shopify-section-shield_before_after,#shopify-section-image_with_text_8wqzxh,#shopify-section-ds_testimonials_RaQjhC) .rich-text__heading::after{ background:#9A7327 !important; }
-  :is(#shopify-section-shield_before_after,#shopify-section-image_with_text_8wqzxh,#shopify-section-ds_testimonials_RaQjhC) :is(.rating-star){ color:#9A7327 !important; }
+  /* WHITE: texto negro */
+  :is(#shopify-section-image_with_text_6NJQ98,#shopify-section-results_bTnYR4,#shopify-section-collapsible_content_ea4B3M) :is(p,li,span,.rte,td,th){ color:{{ tLight }} !important; }
 
-  /* WHITE: texto negro (encabezados quedan dorados por el estilo global) */
-  :is(#shopify-section-image_with_text_6NJQ98,#shopify-section-results_bTnYR4,#shopify-section-collapsible_content_ea4B3M) :is(p,li,span,.rte,td,th){ color:#0B0B0C !important; }
+  /* Antes/Despues sobre banda clara */
+  #shopify-section-shield_before_after :is(.shield-ba__title,.shield-ba__eyebrow,.shield-ba__caption){ background:none !important; -webkit-text-fill-color:{{ tLight }} !important; color:{{ tLight }} !important; }
 
-  /* Antes/Despues: titulo, bajada y aclaracion en negro sobre banda clara */
-  #shopify-section-shield_before_after :is(.shield-ba__title,.shield-ba__eyebrow,.shield-ba__caption){ background:none !important; -webkit-text-fill-color:#0B0B0C !important; color:#0B0B0C !important; }
-
-  /* CONTENEDOR: cajas de los banners de imagen con tono contrastante */
-  #shopify-section-image_with_text_6NJQ98 .image-with-text__content{ background:#F8F1DF !important; border-radius:12px; }
-  #shopify-section-image_with_text_8wqzxh .image-with-text__content{ background:#ffffff !important; border-radius:12px; }
+  /* Contenedores de los banners de imagen */
+  #shopify-section-image_with_text_6NJQ98 .image-with-text__content{ background:{{ cont2 }} !important; border-radius:12px; }
+  #shopify-section-image_with_text_8wqzxh .image-with-text__content{ background:{{ cont1 }} !important; border-radius:12px; }
 </style>
 
 {% schema %}
@@ -112,7 +91,23 @@
   "name": "SHIELD · Estilo PDP",
   "tag": "section",
   "settings": [
-    { "type": "paragraph", "content": "Aplica tipografias, boton dorado y esquemas de color alternados (blanco / dorado claro / dorado oscuro) a la pagina de producto sin cambiar el contenido. Mantener al inicio del producto." }
+    { "type": "header", "content": "Bandas de fondo (alternancia)" },
+    { "type": "color", "id": "band_dark", "label": "Banda dorado oscuro", "default": "#9A7327" },
+    { "type": "color", "id": "band_light", "label": "Banda dorado claro", "default": "#EAD9A0" },
+    { "type": "color", "id": "band_white", "label": "Banda blanca", "default": "#FFFFFF" },
+    { "type": "header", "content": "Texto sobre las bandas" },
+    { "type": "color", "id": "text_on_dark", "label": "Texto sobre dorado oscuro", "default": "#F4F1EA" },
+    { "type": "color", "id": "text_on_light", "label": "Texto sobre claro/blanco", "default": "#0B0B0C" },
+    { "type": "header", "content": "Encabezados (degradé dorado)" },
+    { "type": "color", "id": "heading_gold_1", "label": "Encabezado dorado - inicio", "default": "#C9A24A" },
+    { "type": "color", "id": "heading_gold_2", "label": "Encabezado dorado - fin", "default": "#8A6722" },
+    { "type": "header", "content": "Botón de compra (degradé dorado)" },
+    { "type": "color", "id": "button_1", "label": "Botón - inicio", "default": "#E3C268" },
+    { "type": "color", "id": "button_2", "label": "Botón - medio", "default": "#B8893C" },
+    { "type": "color", "id": "button_3", "label": "Botón - fin", "default": "#9A7327" },
+    { "type": "header", "content": "Contenedores de los banners de imagen" },
+    { "type": "color", "id": "container_white", "label": "Caja sobre banda clara", "default": "#FFFFFF" },
+    { "type": "color", "id": "container_light", "label": "Caja sobre banda blanca", "default": "#F8F1DF" }
   ],
   "presets": [{ "name": "SHIELD · Estilo PDP" }]
 }
